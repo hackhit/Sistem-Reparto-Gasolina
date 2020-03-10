@@ -1,6 +1,8 @@
 # LuciaTrabajo  
 
 El trabajo que Lucia me pidio
+comando para compilar porque soy indio y se me olvida
+g++ main.cpp -o main.exe
 
 ## Estructura y funcionamiento del proyecto  
 

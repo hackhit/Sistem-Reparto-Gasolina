@@ -20,6 +20,7 @@ public:
     void producirGasolina(float);
     string obtenerDatos();
     void guardarDatos();
+    void menu();
 };
 /*
 Suponemos que cuando creamos la refineria tiene capacidad infinita pues porque queremos
@@ -66,4 +67,48 @@ void Refineria::guardarDatos()
 
     archivo.close();
 }
+
+void Refineria::menu()
+{
+    bool salir = false;
+
+    do
+    {
+        int opcion;
+        cout << "Estacion: " << nombre << endl;
+        cout << "Capacidad: " << obtenerCapacidad() << " litros" << endl;
+        cout << "Actualmente posee: " << cantidadLitrosDisponible() << "litros" 
+            << endl;
+        cout << "1. Producir Gasolina" << endl;
+        cout << "2. Cargar cisterna" << endl;
+        cout << "3. Salir Refineria" << endl;
+        cout << "Ingrese opcion: ";
+        cin >> opcion;
+        
+        system("clear");
+
+        switch (opcion)
+        {
+        case 1:
+            
+            system("clear");
+
+            break;
+        case 3:
+
+            salir = true;
+            
+            break;
+
+        default:
+
+            cout << "Opcion no disponible ingrese otra" << endl;
+
+            break;
+        }
+
+    } while (!salir);
+    
+}
+
 #endif

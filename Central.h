@@ -29,6 +29,7 @@ public:
     void controlRefinerias();
     void inicializarRefinerias();
     void mostrarRefinerias();
+    void seleccionarRefineria(int);
 
     void controlGasolineras();
     void inicializarEstaciones();
@@ -98,11 +99,7 @@ void Central::funciones(int opcion)
     }
 }
 
-void Central::controlRefinerias()
-{
-
-}
-
 #include "ManejoArchivosCentral.hpp"
 #include "controlGasolineras.hpp"
+#include "controlRefineria.hpp"
 #endif

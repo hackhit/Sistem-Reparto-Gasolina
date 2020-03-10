@@ -16,21 +16,6 @@ void Central::mostrarCisternas()
     cisternas = auxiliar;
 }
 
-void Central::mostrarRefinerias()
-{
-    queue<Refineria> auxiliar;
-    
-    while (!refinerias.empty())
-    {
-
-        cout << refinerias.size();
-        cout << refinerias.front().obtenerDatos();
-        auxiliar.push(refinerias.front());
-        refinerias.pop();
-    }
-    
-    refinerias = auxiliar;
-}
 
 void Central::inicializarCisternas()
 {
@@ -151,7 +136,6 @@ void Central::inicializarRefinerias()
 
             nueva.establecerLitrosTotales(litrosTotales);
             refinerias.push(nueva);
-            nueva.~Refineria();
         }
     }
     //cout << _placa << _litros << _litrosTotales << _nombre << _cedula << _telefono;

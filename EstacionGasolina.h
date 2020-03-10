@@ -52,7 +52,7 @@ void EstacionGasolina::surtirGasolina(string placa, float _litros)
     }
     vehiculos = auxiliar;
     vehiculos.push(placa);
-    descargar(_litros);
+    reducirLitros(_litros);
 
     //Sube el carro a la central para luego comprobar 
     ofstream archivo;
@@ -102,7 +102,7 @@ void EstacionGasolina::menu()
     bool salir = false;
     string _placa;
 
-    while (!salir)
+    do
     {
         int opcion;
         cout << "Estacion: " << nombre << endl;
@@ -111,6 +111,7 @@ void EstacionGasolina::menu()
             << endl;
         cout << "1. Surtir Gasolina" << endl;
         cout << "2. Cambiar encargado" << endl;
+        cout << "3. Salir Gasolinera" << endl;
         cout << "Ingrese opcion: ";
         cin >> opcion;
         system("clear");
@@ -119,15 +120,28 @@ void EstacionGasolina::menu()
         {
         case 1:
             
-            cout << "Aniada la placa del carro: ";
+            cout << "Ingresar la placa del carro: ";
             cin >> _placa;
             surtirGasolina(_placa, 40);
             system("clear");
+
             break;
-        
+        case 3:
+
+            salir = true;
+            
+            break;
+
         default:
+
+            cout << "Opcion no disponible ingrese otra" << endl;
+
             break;
         }
-    }
+
+
+    } while (!salir);
+    
 }
+
 #endif 

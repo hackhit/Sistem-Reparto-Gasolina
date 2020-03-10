@@ -5,15 +5,30 @@ void Central::controlGasolineras()
     int opcion;
     while (true)
     {
-        cout << "Lista de gasolineras, escoja cual desea supervisar" << endl;
+        cout << "Lista de gasolineras, escoja cual desea supervisar" << endl << endl;
         mostrarEstaciones();
+        cout << endl << "Ingrese (0) para salir" << endl;
+        cout << "Ingrese numero estacion: ";
         cin >> opcion;
+        if (opcion == 0)
+        {
+            system("clear");
+            break;
+        }
+        else if(opcion > estaciones.size())
+        {
+            system("clear");
+            cout << "Estacion no existe ingrese de nuevo" << endl;
+            continue;
+        }
         system("clear");
         seleccionarEstacion(opcion);
         estaciones.front().menu();
+        system("clear");
     }
     
 }
+
 void Central::seleccionarEstacion(int opcion)
 {
     queue<EstacionGasolina> auxiliar;
