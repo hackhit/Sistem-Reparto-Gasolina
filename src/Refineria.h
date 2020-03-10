@@ -14,7 +14,7 @@ private:
     Persona encargado;
 
 public:
-    Refineria(string, float, string, int, int);
+    Refineria(string, float, float ,string, string, string);
     ~Refineria();
 
     void producirGasolina(float);
@@ -22,7 +22,7 @@ public:
 /*
 Suponemos que cuando creamos la refineria tiene capacidad infinita pues porque queremos
 */
-Refineria::Refineria(string _nombreRefineria, float _litros, string _nombreEncargado, int _cedulaEncargado, int _telefonoEncargado) : Tanque(_litros, 10000000000)
+Refineria::Refineria(string _nombreRefineria, float _litros, float capacidad = 10000000000, string _nombreEncargado = "", string _cedulaEncargado = "", string _telefonoEncargado = "") : Tanque(_litros, capacidad)
 {
     nombre = _nombreRefineria;
     encargado.establecerDatos(_nombreEncargado, _cedulaEncargado, _telefonoEncargado);

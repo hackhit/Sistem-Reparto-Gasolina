@@ -1,0 +1,8 @@
+
+Placa: 23xsd8
+Litros manejados: 15000.000000
+Litros restantes: 15000.000000
+Datos del chofer
+Nombre: Jose
+Cedula: 24037667
+Telefono: 04140951540

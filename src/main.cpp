@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
+#include "Cisterna.h"
+#include "Central.h"
 
 int main() {
-    
-    std::cout << "Hello Easy C++ project!" << std::endl;
+    Central central;
+    central.mostrarCisternas();
 }

@@ -1,6 +1,12 @@
 {
     "files.associations": {
-        "*.tpp": "cpp"
+        "Gestion_productos": "sql",
+        "*.tpp": "cpp",
+        "ostream": "cpp",
+        "iosfwd": "cpp",
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "iostream": "cpp"
     },
     "terminal.integrated.shell.windows": "cmd.exe"
 }

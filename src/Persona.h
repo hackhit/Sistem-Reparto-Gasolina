@@ -8,14 +8,14 @@ class Persona
 {
 private:
     string nombre;
-    int cedula;
-    int telefono;
+    string cedula;
+    string telefono;
 public:
     Persona();
     ~Persona();
 
-    void establecerDatos(string, int, int);
-    void obtenerDatos();
+    void establecerDatos(string, string, string);
+    string obtenerDatos();
     void guardarDatos();
 };
 
@@ -28,19 +28,17 @@ Persona::~Persona()
 {
 }
 
-void Persona::establecerDatos(string _nombre, int _cedula, int _telefono)
+void Persona::establecerDatos(string _nombre, string _cedula, string _telefono)
 {
     nombre = _nombre;
     cedula = _cedula;
     telefono = _telefono;
 }
 
-void Persona::obtenerDatos()
+string Persona::obtenerDatos()
 {
-    cout << "Nombre: " << nombre << endl;
-    cout << "Nombre: " << cedula << endl;
-    cout << "Nombre: " << telefono << endl;
-}
+    return  "\nNombre: " + nombre + "\nCedula: " + cedula + "\nTelefono: " + telefono;
+} 
 
 void Persona::guardarDatos()
 {
