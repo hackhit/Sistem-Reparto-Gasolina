@@ -47,7 +47,7 @@ void Central::inicializarCisternas()
     {
         archivoCisternas >> variable;
         
-        cout << variable << endl;
+        //cout << variable << endl;
 
         if(variable == "Placa:")
         {
@@ -72,13 +72,14 @@ void Central::inicializarCisternas()
         else if(variable == "Telefono:")
         {
             archivoCisternas >> _telefono;
+
             float litros = ::atof(_litros.c_str());
             float litrosTotales = ::atof(_litrosTotales.c_str());
+
             Cisterna nueva(_placa, litros, litrosTotales, _nombre, _cedula, _telefono);
             cisternas.push(nueva);
-            
+            nueva.~Cisterna();
         }
-        
     }
     //cout << _placa << _litros << _litrosTotales << _nombre << _cedula << _telefono;
     archivoCisternas.close();
@@ -90,13 +91,12 @@ void Central::mostrarCisternas()
     
     while (!cisternas.empty())
     {
+
         cout << cisternas.size();
-        Cisterna cisterna = cisternas.front();
-        cout << cisterna.obtenerDatos();
+        cout << cisternas.front().obtenerDatos();
         auxiliar.push(cisternas.front());
         cisternas.pop();
     }
     
     cisternas = auxiliar;
-    
 }

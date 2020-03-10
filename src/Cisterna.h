@@ -18,6 +18,10 @@ public:
     ~Cisterna();
 
     void guardarDatos();
+    string obtenerPlaca()
+    {
+        return placa;
+    }
     string obtenerDatos();
 };
 
@@ -42,7 +46,8 @@ string Cisterna::obtenerDatos()
 void Cisterna::guardarDatos()
 {
     ofstream archivoCisternas;
-    archivoCisternas.open("Cisternas.txt", ios::out); //Abrimos el archivoCisternas
+    //TODO cambie de crear el archivo a solo añadir informacion
+    archivoCisternas.open("Cisternas.txt", ios::app); //Abrimos el archivoCisternas
     //
     if (archivoCisternas.fail())
     {
