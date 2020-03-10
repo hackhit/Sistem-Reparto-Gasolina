@@ -1,0 +1,8 @@
+Nombre de estacion: Bomba las morochas
+Capacidad del tanque: 90000.000000
+Litros manejados: 2000.000000
+Litros restantes: 2000.000000
+Datos del encargado
+Nombre: Pedro Lovera
+Cedula: 12756877
+Telefono: 04268795112

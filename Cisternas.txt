@@ -1,0 +1,16 @@
+Placa: 23xsd8
+Capacidad del tanque:  150000.000000
+Litros manejados: 45000.000000
+Litros restantes: 15000.000000
+Datos del chofer
+Nombre: Jose
+Cedula: 24037667
+Telefono: 04140951540
+Placa: sda45s6d
+Capacidad del tanque: 20000.000000
+Litros manejados: 499.000000
+Litros restantes: 499.000000
+Datos del chofer
+Nombre: Luis
+Cedula: 2649987
+Telefono: 0412337654
