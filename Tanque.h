@@ -32,6 +32,11 @@ Tanque::~Tanque()
 {
 }
 
+void Tanque::establecerCapacidad(float _capacidad)
+{
+    capacidad = _capacidad;
+}
+
 float Tanque::cargar(float cantidadACargar)
 {
     float sobrante = 0;
