@@ -5,13 +5,12 @@
 using namespace std;
 #include "Gasolina.h"
 #include "Persona.h"
-#include "Cisterna.h"
+#include "Tanque.h"
 
-class Refineria
+class Refineria : public Tanque
 {
 private:
     string nombre;
-    Gasolina litros;
     Persona encargado;
 
 public:
@@ -19,13 +18,13 @@ public:
     ~Refineria();
 
     void producirGasolina(float);
-    float llenarCisterna(Cisterna&, float);
 };
-
-Refineria::Refineria(string _nombreRefineria, float _litros, string _nombreEncargado, int _cedulaEncargado, int _telefonoEncargado)
+/*
+Suponemos que cuando creamos la refineria tiene capacidad infinita pues porque queremos
+*/
+Refineria::Refineria(string _nombreRefineria, float _litros, string _nombreEncargado, int _cedulaEncargado, int _telefonoEncargado) : Tanque(_litros, 10000000000)
 {
     nombre = _nombreRefineria;
-    litros.aumentar(_litros);
     encargado.establecerDatos(_nombreEncargado, _cedulaEncargado, _telefonoEncargado);
 }
 
@@ -35,13 +34,9 @@ Refineria::~Refineria()
 
 void Refineria::producirGasolina(float _litros)
 {
-    litros.aumentar(_litros);
+    aumentarLitros(_litros);
+    aumentarLitrosTotales(_litros);
 }
 
-float Refineria::llenarCisterna(Cisterna &cisterna, float _cantidad)
-{
-    cisterna.recibir(_cantidad);
-    litros.reducir(_cantidad);
-}
 
 #endif
