@@ -19,6 +19,7 @@ public:
     float litrosManejados();
     float obtenerCapacidad();
     float establecerLitrosTotales(float);
+    void establecerCapacidad(float);
 };
 
 Tanque::Tanque(float litros = 0, float _capacidad = 50000) : Gasolina(litros)

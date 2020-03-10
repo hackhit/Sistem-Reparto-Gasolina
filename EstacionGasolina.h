@@ -20,6 +20,7 @@ public:
     void surtirGasolina(string, float);
     void guardarDatos();
     void menu();
+    void pedirDatos();
     string obtenerDatos();
 };
 
@@ -144,4 +145,31 @@ void EstacionGasolina::menu()
     
 }
 
+void EstacionGasolina::pedirDatos()
+{
+    string _nombre;
+    float _litros;
+    float capacidadGasolinera = 150000;
+    string _nombreEncargado;
+    string _cedulaEncargado;
+    string _telefonoEncargado;
+    
+    cout << "Ingrese el nombre de la Estacion: " << endl;
+    getline(cin, _nombre);
+    cout << "Ingrese su capacidad de gasolina: " << endl;
+    cin >> capacidadGasolinera;
+    cout << "Ingrese cantidad actual d gasolina: " << endl;
+    cin >> _litros;
+    cout << "Ingrese el nombre del encargado: " << endl;
+    getline(cin, _nombreEncargado);
+    cout << "Ingrese su cedula: " << endl;
+    getline(cin, _cedulaEncargado);
+    cout << "Ingrese el telefono: " << endl;
+    getline(cin, _telefonoEncargado);
+
+    nombre = _nombre;
+    establecerCapacidad(capacidadGasolinera);
+    establecerLitros(_litros);
+    encargado.establecerDatos(_nombreEncargado, _cedulaEncargado, _telefonoEncargado);
+}
 #endif 

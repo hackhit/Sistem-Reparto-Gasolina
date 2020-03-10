@@ -15,14 +15,20 @@ private:
     queue<EstacionGasolina> estaciones;
 
     float litrosPlaneadosADistribuir;
-    
+    float dias = 7;
+    float litrosTotal;
 public:
     Central(/* args */);
     ~Central();
 
     void menu();
     void funciones(int);
-
+    void planeamiento();
+    //Prototipos de funcion a utilizar para el planteamiento
+    float litrosEnRefineria();
+    float diasHastaProximaEntrega(); 
+    float litrosRecomendadosPorDia();
+    //TODO deberia pensar en una clase para esto ser repite mucho y no me gusta que se repita
     void inicializarCisternas();
     void mostrarCisternas();
 
@@ -62,9 +68,11 @@ void Central::menu()
         cout << "5. Revisar si hay algun trafico ilegal" << endl;
         cout << "6. Controlar gasolineras" << endl;
         cout << "7. Controlar cisternas" << endl;
+        cout << "8. Agregar estaciones/refinerias/cinternas" << endl;
         cout << "9. Salir" << endl;
         cout << "Ingrese opcion: ";
         cin >> opcion;
+
         system("clear");
         funciones(opcion);
     }
@@ -79,7 +87,9 @@ void Central::funciones(int opcion)
     case 1:
         controlRefinerias();
         break;
-
+    case 4: 
+        planeamiento();
+        break();
     case 6:
         controlGasolineras();
         break;
@@ -97,6 +107,21 @@ void Central::funciones(int opcion)
         cout << "Opcion invalidad ingrese de nuevo" << endl << endl;
         break;
     }
+}
+
+void Central::planeamiento()
+{
+    salir = false;
+    {
+        cout << " Se disponen de " << litrosEnRefineria() << " litros en las refinerias" << endl;
+        cout << " Los cuales deberan durar " << diasHastaProximaEntrega() << " dias hasta la proxima entrega de gasolina" << endl;
+        cout << " Se recomienda que se entrenguen " << litrosRecomendadosPorDia () << " por dia, para repartir entre las estaciones afiliadas" <<  endl;
+
+        cout << "Acciones:" << endl
+        cout << "1. Proceder con la recomendacion," << endl;
+        cout << "2. Ingresar una cantidad manual (\"Puede provocar falta de suministro\") " << endl;
+    }
+    while (!salir);
 }
 
 #include "ManejoArchivosCentral.hpp"

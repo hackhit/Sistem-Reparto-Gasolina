@@ -18,6 +18,7 @@ public:
     ~Refineria();
 
     void producirGasolina(float);
+    void pedirDatos();
     string obtenerDatos();
     void guardarDatos();
     void menu();
@@ -84,7 +85,7 @@ void Refineria::menu()
         cout << "3. Salir Refineria" << endl;
         cout << "Ingrese opcion: ";
         cin >> opcion;
-        
+
         system("clear");
 
         switch (opcion)
@@ -111,4 +112,31 @@ void Refineria::menu()
     
 }
 
+void Refineria::pedirDatos()
+{
+    string _nombre;
+    float _litros;
+    float capacidadRefineria = 150000;
+    string _nombreEncargado;
+    string _cedulaEncargado;
+    string _telefonoEncargado;
+    
+    cout << "Ingrese el nombre de la Refineria: " << endl;
+    getline(cin, _nombre);
+    cout << "Ingrese su capacidad de gasolina: " << endl;
+    cin >> capacidadRefineria;
+    cout << "Ingrese cantidad actual d gasolina: " << endl;
+    cin >> _litros;
+    cout << "Ingrese el nombre del encargado: " << endl;
+    getline(cin, _nombreEncargado);
+    cout << "Ingrese su cedula: " << endl;
+    getline(cin, _cedulaEncargado);
+    cout << "Ingrese el telefono: " << endl;
+    getline(cin, _telefonoEncargado);
+
+    nombre = _nombre;
+    establecerCapacidad(capacidadRefineria);
+    establecerLitros(_litros);
+    encargado.establecerDatos(_nombreEncargado, _cedulaEncargado, _telefonoEncargado);
+}
 #endif
