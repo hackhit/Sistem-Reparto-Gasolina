@@ -30,7 +30,7 @@ public:
     void planeamiento();
     //Prototipos de funcion a utilizar para el planteamiento
     float litrosEnRefineria();
-    float diasHastaProximaEntrega; 
+    void cambiarDiaProximaEntrega(); 
     float litrosRecomendadosPorDia();
 
     //TODO deberia pensar en una clase para esto ser repite mucho y no me gusta que se repita
@@ -123,11 +123,12 @@ void Central::planeamiento()
     {
         cout << "Se disponen de " << litrosEnRefineria() << " litros en las refinerias" << endl;
         cout << "Los cuales deberan durar " << diasHastaProximaEntrega << " dias hasta la proxima entrega de gasolina" << endl;
-        cout << "Se recomienda que se entrenguen " << litrosRecomendadosPorDia () << " por dia, para repartir entre las estaciones afiliadas" <<  endl;
+        cout << "Se recomienda que se entrenguen " << litrosRecomendadosPorDia () << " litros por dia, para repartir entre las estaciones afiliadas" <<  endl;
 
         cout << "Acciones:" << endl;
         cout << "1. Proceder con la recomendacion," << endl;
         cout << "2. Ingresar una cantidad manual (\"Puede provocar falta de suministro\") " << endl;
+        cout << "3. Salir planificacion" << endl;
     }
     while (!salir);
 }
@@ -148,7 +149,7 @@ float Central::litrosEnRefineria()
     return litrosActuales;
 }
 
-float Central::diasHastaProximaEntrega()
+void Central::cambiarDiaProximaEntrega()
 {
     
 }

@@ -55,14 +55,15 @@ void Central::seleccionarEstacion(int opcion)
 void Central::mostrarEstaciones()
 {
     queue<EstacionGasolina> auxiliar;
-    
+    int posicion = 1;
     while (!estaciones.empty())
     {
-        cout << "Estacion " << estaciones.size() << ".";
+        cout << "Estacion " << posicion << ".";
         cout << estaciones.front().obtenerDatos();
         auxiliar.push(estaciones.front());
         cout << endl;
         estaciones.pop();
+        posicion++;
     }
     
     estaciones = auxiliar;
