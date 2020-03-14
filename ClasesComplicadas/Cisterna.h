@@ -4,8 +4,8 @@
 #include <iostream>
 using namespace std;
 #include <fstream>
-#include "Tanque.h"
-#include "Persona.h"
+#include "ClasesBases/Tanque.h"
+#include "ClasesBases/Persona.h"
 
 class Cisterna : public Tanque
 {
@@ -47,19 +47,19 @@ string Cisterna::obtenerDatos()
 
 void Cisterna::guardarDatos()
 {
-    ofstream archivoCisternas;
+    ofstream archivo;
     //TODO cambie de crear el archivo a solo añadir informacion
-    archivoCisternas.open("Cisternas.txt", ios::app); //Abrimos el archivoCisternas
+    archivo.open("BaseDatos/Cisternas.txt", ios::app); //Abrimos el archivo
     //
-    if (archivoCisternas.fail())
+    if (archivo.fail())
     {
-        cout << "No se pudo abrir el archivo" << endl;
+        cout << "No se pudo abrir el archivo Cisternas" << endl;
         exit(1);
     }
     
-    archivoCisternas << obtenerDatos();
+    archivo << obtenerDatos();
 
-    archivoCisternas.close();
+    archivo.close();
 }
 
 

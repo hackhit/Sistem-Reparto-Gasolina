@@ -35,11 +35,17 @@ void Persona::establecerDatos(string _nombre, string _cedula, string _telefono)
     telefono = _telefono;
 }
 
+/*
+    Retorna el nombre, cedula y telefono de la persona en el siguiente formato:
+    "\nNombre: " + nombre + "\nCedula: " + cedula + "\nTelefono: " + telefono;
+*/
 string Persona::obtenerDatos()
 {
     return  "\nNombre: " + nombre + "\nCedula: " + cedula + "\nTelefono: " + telefono;
 } 
-
+/*
+    No aplica porque no tengo central de trabajadores, se necesitara si hay mas tiempo para el proyecto
+*/
 void Persona::guardarDatos()
 {
 }

@@ -29,21 +29,33 @@ Gasolina::~Gasolina()
 {
 }
 
+/*
+    Establece la variable litros por la cantidad ingresada
+*/
 void Gasolina::establecerLitros(float _litros)
 {
     litros = _litros;
 }
 
+/*
+    Aumenta la variable litros por la cantidad ingresada
+*/
 void Gasolina::aumentarLitros(float valor)
 {
     litros += valor; 
 }
 
+/*
+    Reduce la variable litros por la cantidad ingresada
+*/
 void Gasolina::reducirLitros(float valor)
 {
     litros -= valor;
 }
 
+/*
+    Devuelve la cantidad de gasolina disponible
+*/
 float Gasolina::cantidadLitrosDisponible()
 {
     return litros;

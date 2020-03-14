@@ -4,8 +4,8 @@
 #include <iostream>
 using namespace std;
 #include <queue>
-#include "Persona.h"
-#include "Tanque.h"
+#include "ClasesBases/Persona.h"
+#include "ClasesBases/Tanque.h"
 class EstacionGasolina : public Tanque
 {
 private:
@@ -58,7 +58,7 @@ void EstacionGasolina::surtirGasolina(string placa, float _litros)
     //Sube el carro a la central para luego comprobar 
     ofstream archivo;
     //TODO cambie de crear el archivo a solo añadir informacion
-    archivo.open("vehiculosSurtidos.txt", ios::app); //Abrimos el archivoCisternas
+    archivo.open("BaseDatos/vehiculosSurtidos.txt", ios::app); //Abrimos el archivoCisternas
     //
     if (archivo.fail())
     {
@@ -85,7 +85,7 @@ void EstacionGasolina::guardarDatos()
 {
     ofstream archivo;
     //TODO cambie de crear el archivo a solo añadir informacion
-    archivo.open("Estaciones.txt", ios::app); //Abrimos el archivoCisternas
+    archivo.open("BaseDatos/Estaciones.txt", ios::app); //Abrimos el archivoCisternas
     //
     if (archivo.fail())
     {

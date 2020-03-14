@@ -3,9 +3,9 @@
 
 #include <iostream>
 using namespace std;
-#include "Gasolina.h"
-#include "Persona.h"
-#include "Tanque.h"
+#include "ClasesBases/Gasolina.h"
+#include "ClasesBases/Persona.h"
+#include "ClasesBases/Tanque.h"
 
 class Refineria : public Tanque
 {
@@ -56,11 +56,12 @@ void Refineria::guardarDatos()
 {
     ofstream archivo;
     //TODO cambie de crear el archivo a solo añadir informacion
-    archivo.open("Refineria.txt", ios::app); //Abrimos el archivoCisternas
+    archivo.open("BaseDatos/Refinerias.txt", ios::app); //Abrimos el archivoCisternas
     //
     if (archivo.fail())
     {
-        cout << "No se pudo abrir el archivo" << endl;
+        cout << "No se pudo abrir el archivo refinerias" << endl;
+        
         exit(1);
     }
     

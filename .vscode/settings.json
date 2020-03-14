@@ -6,7 +6,8 @@
         "iosfwd": "cpp",
         "*.tcc": "cpp",
         "fstream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "string": "cpp"
     },
     "terminal.integrated.shell.windows": "cmd.exe"
 }

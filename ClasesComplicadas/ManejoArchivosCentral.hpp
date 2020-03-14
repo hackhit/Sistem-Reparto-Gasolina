@@ -24,7 +24,7 @@ void Central::inicializarCisternas()
     string _placa, _litros, _litrosTotales, _nombre, _cedula, _telefono, _capacidad;
     
     ifstream archivo;
-    archivo.open("Cisternas.txt", ios::in);
+    archivo.open("BaseDatos/Cisternas.txt", ios::in);
 
     if(archivo.fail())
     {
@@ -86,7 +86,7 @@ void Central::inicializarRefinerias()
     string _nombreRefineria, _litros, _litrosTotales, _nombre, _cedula, _telefono, _capacidad;
     
     ifstream archivo;
-    archivo.open("Refinerias.txt", ios::in);
+    archivo.open("BaseDatos/Refinerias.txt", ios::in);
 
     if(archivo.fail())
     {
@@ -149,7 +149,7 @@ void Central::inicializarEstaciones()
     string _nombreEstacion, _litros, _litrosTotales, _nombre, _cedula, _telefono, _capacidad;
     
     ifstream archivo;
-    archivo.open("Estaciones.txt", ios::in);
+    archivo.open("BaseDatos/Estaciones.txt", ios::in);
 
     if(archivo.fail())
     {
