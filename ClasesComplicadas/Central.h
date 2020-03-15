@@ -137,6 +137,7 @@ void Central::planeamiento()
         {
         case 3:
             salir = true;
+            system("clear");
             break;
         
         default:

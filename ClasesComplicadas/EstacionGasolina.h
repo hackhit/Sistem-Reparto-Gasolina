@@ -5,29 +5,27 @@
 using namespace std;
 #include <queue>
 #include "ClasesBases/Persona.h"
-#include "ClasesBases/Tanque.h"
-class EstacionGasolina : public Tanque
+#include "ClasesBases/Infraestructura.h"
+class EstacionGasolina : public Infraestructura
 {
 private:
-    string nombre;
-    Persona encargado;
+    string baseDatos = "BaseDatos/Estaciones.txt";
     queue<string> vehiculos;
 
 public:
     EstacionGasolina(string, float, float, string, string, string);
     ~EstacionGasolina();
 
+    void guardarDatos()
+    {
+        Infraestructura::guardarDatos(baseDatos);
+    }
     void surtirGasolina(string, float);
-    void guardarDatos();
     void menu();
-    void pedirDatos();
-    string obtenerDatos();
 };
 
-EstacionGasolina::EstacionGasolina(string _nombre, float _litros, float capacidadGasolinera = 150000, string _nombreEncargado = "", string _cedulaEncargado = "", string _telefonoEncargado = "") : Tanque(_litros, capacidadGasolinera)
+EstacionGasolina::EstacionGasolina(string _nombre, float _litros, float capacidadTanque = 150000, string _nombreEncargado = "", string _cedulaEncargado = "", string _telefonoEncargado = "") : Infraestructura(_nombre,  _litros, capacidadTanque = 150000, _nombreEncargado ,  _cedulaEncargado , _telefonoEncargado )
 {
-    nombre = _nombre;
-    encargado.establecerDatos(_nombreEncargado, _cedulaEncargado, _telefonoEncargado);
 }
 
 EstacionGasolina::~EstacionGasolina()
@@ -71,33 +69,6 @@ void EstacionGasolina::surtirGasolina(string placa, float _litros)
     archivo.close();
 }
 
-string EstacionGasolina::obtenerDatos()
-{
-    string datosEncargado = encargado.obtenerDatos();
-    string Manejados = to_string(litrosManejados()) ;
-    string litrosDisponibles = to_string(cantidadLitrosDisponible());
-    string capacidadTanque = to_string(obtenerCapacidad());
-
-    return "\nNombre de estacion: " + nombre + "\nCapacidad del tanque: " + capacidadTanque + "\nLitros manejados: " + Manejados + "\nLitros restantes: " + litrosDisponibles + "\nDatos del encargado" + datosEncargado;
-}
-
-void EstacionGasolina::guardarDatos()
-{
-    ofstream archivo;
-    //TODO cambie de crear el archivo a solo añadir informacion
-    archivo.open("BaseDatos/Estaciones.txt", ios::app); //Abrimos el archivoCisternas
-    //
-    if (archivo.fail())
-    {
-        cout << "No se pudo abrir el archivo" << endl;
-        exit(1);
-    }
-    
-    archivo << obtenerDatos();
-
-    archivo.close();
-}
-
 void EstacionGasolina::menu()
 {
     bool salir = false;
@@ -106,10 +77,10 @@ void EstacionGasolina::menu()
     do
     {
         int opcion;
-        cout << "Estacion: " << nombre << endl;
-        cout << "Capacidad: " << obtenerCapacidad() << " litros" << endl;
-        cout << "Actualmente posee: " << cantidadLitrosDisponible() << "litros" 
-            << endl;
+        obtenerDatos();
+
+        cout << endl << endl;
+        cout << "Indique la accion a realizar" << endl;
         cout << "1. Surtir Gasolina" << endl;
         cout << "2. Cambiar encargado" << endl;
         cout << "3. Salir Gasolinera" << endl;
@@ -145,31 +116,4 @@ void EstacionGasolina::menu()
     
 }
 
-void EstacionGasolina::pedirDatos()
-{
-    string _nombre;
-    float _litros;
-    float capacidadGasolinera = 150000;
-    string _nombreEncargado;
-    string _cedulaEncargado;
-    string _telefonoEncargado;
-    
-    cout << "Ingrese el nombre de la Estacion: " << endl;
-    getline(cin, _nombre);
-    cout << "Ingrese su capacidad de gasolina: " << endl;
-    cin >> capacidadGasolinera;
-    cout << "Ingrese cantidad actual d gasolina: " << endl;
-    cin >> _litros;
-    cout << "Ingrese el nombre del encargado: " << endl;
-    getline(cin, _nombreEncargado);
-    cout << "Ingrese su cedula: " << endl;
-    getline(cin, _cedulaEncargado);
-    cout << "Ingrese el telefono: " << endl;
-    getline(cin, _telefonoEncargado);
-
-    nombre = _nombre;
-    establecerCapacidad(capacidadGasolinera);
-    establecerLitros(_litros);
-    encargado.establecerDatos(_nombreEncargado, _cedulaEncargado, _telefonoEncargado);
-}
 #endif 
