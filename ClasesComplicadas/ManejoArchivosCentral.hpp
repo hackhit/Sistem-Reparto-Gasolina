@@ -1,22 +1,5 @@
 #include "Central.h"
 
-void Central::mostrarCisternas()
-{
-    queue<Cisterna> auxiliar;
-    
-    while (!cisternas.empty())
-    {
-
-        cout << cisternas.size();
-        cout << cisternas.front().obtenerDatos();
-        auxiliar.push(cisternas.front());
-        cisternas.pop();
-    }
-    
-    cisternas = auxiliar;
-}
-
-
 void Central::inicializarCisternas()
 {
     string variable;
@@ -69,8 +52,10 @@ void Central::inicializarCisternas()
             float litros = ::atof(_litros.c_str());
             float litrosTotales = ::atof(_litrosTotales.c_str());
             float capcidadTanque = ::atof(_capacidad.c_str());
+
             Cisterna nueva(_placa, litros, capcidadTanque , _nombre, _cedula, _telefono);
             nueva.establecerLitrosTotales(litrosTotales);
+            
             cisternas.push(nueva);
             nueva.~Cisterna();
         }

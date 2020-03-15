@@ -76,11 +76,11 @@ float Tanque::descargar(float cantidadADescargar)
 {
     float cantidadExtraida;
     //Revisa si puede extraer la cantidad pedida
-    bool puedeExtraerLaCantidad = cantidadADescargar - cantidadLitrosDisponible() > 0;
+    bool puedeExtraerLaCantidad = cantidadLitrosDisponible() - cantidadADescargar > 0;
     if (puedeExtraerLaCantidad)
     {
         reducirLitros(cantidadADescargar);
-        return cantidadExtraida;
+        return cantidadADescargar;
     }
     //Si no puede nada mas extrae la posible
     else

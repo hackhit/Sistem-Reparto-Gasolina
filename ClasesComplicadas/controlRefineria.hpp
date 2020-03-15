@@ -69,3 +69,19 @@ void Central::seleccionarRefineria(int opcion)
     }
     
 }
+
+float Central::litrosEnRefineria()
+{
+    litrosActuales = 0;
+    queue<Refineria> auxiliar;
+    while (!refinerias.empty())
+    {
+        litrosActuales += refinerias.front().cantidadLitrosDisponible();
+        auxiliar.push(refinerias.front());
+        refinerias.pop();
+    }   
+
+    refinerias = auxiliar;
+
+    return litrosActuales;
+}

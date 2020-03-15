@@ -1,7 +1,7 @@
 Nombre de estacion: Bomba las morochas
 Capacidad del tanque: 90000.000000
-Litros manejados: 2000.000000
-Litros restantes: 2000.000000
+Litros manejados: 0
+Litros restantes: 0
 Datos del encargado
 Nombre: Pedro Lovera
 Cedula: 12756877
@@ -9,8 +9,8 @@ Telefono: 04268795112
 
 Nombre de estacion: Atlántico I
 Capacidad del tanque: 25000.000000
-Litros manejados: 3000.000000
-Litros restantes: 3000.000000
+Litros manejados: 0
+Litros restantes: 0
 Datos del encargado
 Nombre: Jose Campos
 Cedula: 12753477
@@ -18,8 +18,8 @@ Telefono: 04265624234
 
 Nombre de estacion: Caura
 Capacidad del tanque: 40000.000000
-Litros manejados: 2000.000000
-Litros restantes: 2000.000000
+Litros manejados: 0
+Litros restantes: 0
 Datos del encargado
 Nombre: Pedro Lovera
 Cedula: 12756877
@@ -27,8 +27,8 @@ Telefono: 04248755113
 
 Nombre de estacion: Cachamay
 Capacidad del tanque: 10000.000000
-Litros manejados: 1000.000000
-Litros restantes: 1000.000000
+Litros manejados: 0
+Litros restantes: 0
 Datos del encargado
 Nombre: Adam Matute
 Cedula: 20756841
@@ -36,8 +36,8 @@ Telefono: 04266648132
 
 Nombre de estacion: Las Americas
 Capacidad del tanque: 40000.000000
-Litros manejados: 2000.000000
-Litros restantes: 2000.000000
+Litros manejados: 0
+Litros restantes: 0
 Datos del encargado
 Nombre: Luciano Joster
 Cedula: 23599670
