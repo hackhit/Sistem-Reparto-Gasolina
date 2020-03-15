@@ -35,4 +35,12 @@
 *.out
 *.app
 
+
+Makefile
+*.pdb
+*.stackdump
+main
+*.stackdump
+main
+vc140.pdb
 # End of https://www.gitignore.io/api/c++
