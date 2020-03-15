@@ -4,7 +4,6 @@
 #include <iostream>
 using namespace std;
 #include <queue>
-#include "ClasesBases/Persona.h"
 #include "ClasesBases/Infraestructura.h"
 class EstacionGasolina : public Infraestructura
 {

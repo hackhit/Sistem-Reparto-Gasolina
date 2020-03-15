@@ -35,6 +35,8 @@ public:
     //TODO deberia pensar en una clase para esto ser repite mucho y no me gusta que se repita
     void inicializarCisternas();
     void mostrarCisternas();
+    void seleccionarCisterna(int);
+    void controlCisternas();
 
     void controlRefinerias();
     void inicializarRefinerias();
@@ -66,14 +68,12 @@ void Central::menu()
         float opcion;
         cout << "Sitema para distribucion y manejo de la gasolina para ciudad Guayana" << endl;
         cout << "1. Planear distribucion del dia" << endl;   
-        cout << "2. Revisar estado de las cisteranas" << endl;
-        cout << "3. Revisar estado de las gasolineras" << endl;      
-        cout << "4. Controlar Refineria" << endl;  
+        cout << "2. Controlar gasolineras" << endl;   
+        cout << "3. Controlar Refineria" << endl;   
+        cout << "4. Controlar cisternas" << endl;
         cout << "5. Revisar si hay algun trafico ilegal" << endl;
-        cout << "6. Controlar gasolineras" << endl;
-        cout << "7. Controlar cisternas" << endl;
-        cout << "8. Agregar estaciones/refinerias/cinternas" << endl;
-        cout << "9. Salir" << endl;
+        cout << "6. Agregar estaciones/refinerias/cinternas" << endl;
+        cout << "0. Salir" << endl;
         cout << "Ingrese opcion: ";
         cin >> opcion;
 
@@ -92,13 +92,18 @@ void Central::funciones(int opcion)
         planeamiento();
         
         break;
-    case 4: 
-        controlRefinerias();
-        break;
-    case 6:
+    case 2:
         controlGasolineras();
         break;
-    case 9:
+
+    case 3: 
+        controlRefinerias();
+        break;
+
+    case 4: 
+        controlCisternas();
+        break;
+    case 0:
         cout << "Estas seguro que desea salir (Y / N)" << endl;
         cin >> confirmar;
 
@@ -178,4 +183,5 @@ float Central::litrosRecomendadosPorDia()
 #include "ManejoArchivosCentral.hpp"
 #include "controlGasolineras.hpp"
 #include "controlRefineria.hpp"
+#include "controlCisterna.hpp"
 #endif
