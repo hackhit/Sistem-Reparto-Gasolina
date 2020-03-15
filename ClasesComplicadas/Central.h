@@ -14,8 +14,8 @@ private:
     queue<EstacionGasolina> estaciones;
 
     //Supongamos que la central tiene que sobrevivir por 7 dias
-    float diasFuncionando;
-    float diasHastaProximaEntrega;
+    float diasFuncionandoSinEntrega = 0;
+    float diasHastaProximaEntrega = 7;
     float litrosPlaneadosADistribuir = 0;
     bool calculoHecho = false;
     float litrosCalculo = 0;
@@ -25,13 +25,13 @@ public:
     ~Central();
 
     void menu();
-    void funciones(int);
+    void funciones(char);
     void planeamiento();
     //Prototipos de funcion a utilizar para el planteamiento
     float litrosEnRefineria();
     void cambiarDiaProximaEntrega(); 
     float litrosRecomendadosPorDia();
-
+    void realizarPlaneamiento(float);
     //TODO deberia pensar en una clase para esto ser repite mucho y no me gusta que se repita
     void inicializarCisternas();
     void mostrarCisternas();
@@ -46,7 +46,9 @@ public:
     void controlGasolineras();
     void inicializarEstaciones();
     void mostrarEstaciones();
-    void seleccionarEstacion(int);    
+    void seleccionarEstacion(int);   
+
+
 };
 
 Central::Central(/* args */)
@@ -65,7 +67,8 @@ void Central::menu()
     bool salir = false;
     while (!salir)
     {
-        float opcion;
+        char opcion;
+
         cout << "Sitema para distribucion y manejo de la gasolina para ciudad Guayana" << endl;
         cout << "1. Planear distribucion del dia" << endl;   
         cout << "2. Controlar gasolineras" << endl;   
@@ -82,28 +85,32 @@ void Central::menu()
     }
 }
 
-void Central::funciones(int opcion)
+void Central::funciones(char opcion)
 {
     char confirmar;
 
     switch (opcion)
     {
-    case 1:
+    case '1':
         planeamiento();
         
         break;
-    case 2:
+    case '2':
         controlGasolineras();
         break;
 
-    case 3: 
+    case '3': 
+        
         controlRefinerias();
         break;
 
-    case 4: 
-        controlCisternas();
+    case '4': 
+        //! Cisternas no funcionan la reparo luego
+        //controlCisternas();
+        cout << "Las cinternas no funcionan" << endl;
+        system("clear");
         break;
-    case 0:
+    case '0':
         cout << "Estas seguro que desea salir (Y / N)" << endl;
         cin >> confirmar;
 
@@ -112,7 +119,7 @@ void Central::funciones(int opcion)
             exit(1);
         }
         break;
-    case 10:
+    case 'R': //! R de robar
         //TODO: aca ira funcion caos ya que eso es lo que agregan los militares
         cout << "Bienvenido senior militar ya que conozco como funciona simplmente robara y no guardara datos de que robo" << endl;
     default:
@@ -121,61 +128,7 @@ void Central::funciones(int opcion)
     }
 }
 
-void Central::planeamiento()
-{
-    int opcion;
-    bool salir = false;
-    do    
-    {
-        cout << "Se disponen de " << litrosEnRefineria() << " litros en las refinerias" << endl;
-        cout << "Los cuales deberan durar " << diasHastaProximaEntrega << " dias hasta la proxima entrega de gasolina" << endl;
-        cout << "Se recomienda que se entrenguen " << litrosRecomendadosPorDia () << " litros por dia, para repartir entre las estaciones afiliadas" <<  endl;
-
-        cout << "Acciones:" << endl;
-        cout << "1. Proceder con la recomendacion," << endl;
-        cout << "2. Ingresar una cantidad manual (\"Puede provocar falta de suministro\") " << endl;
-        cout << "3. Salir planificacion" << endl;
-        cout << "Ingrese la opcion: ";
-        cin >> opcion;
-
-        switch (opcion)
-        {
-        case 3:
-            salir = true;
-            system("clear");
-            break;
-        
-        default:
-            cout << "Ingrese Una opcion valida";
-            system("clear");
-            break;
-        }
-    }
-    while (!salir);
-}
-
-float Central::litrosEnRefineria()
-{
-    litrosActuales = 0;
-    queue<Refineria> auxiliar;
-    while (!refinerias.empty())
-    {
-        litrosActuales += refinerias.front().cantidadLitrosDisponible();
-        auxiliar.push(refinerias.front());
-        refinerias.pop();
-    }   
-
-    refinerias = auxiliar;
-
-    return litrosActuales;
-}
-
 void Central::cambiarDiaProximaEntrega()
-{
-    
-}
-
-float Central::litrosRecomendadosPorDia()
 {
     
 }
@@ -184,4 +137,5 @@ float Central::litrosRecomendadosPorDia()
 #include "controlGasolineras.hpp"
 #include "controlRefineria.hpp"
 #include "controlCisterna.hpp"
+#include "planeamiento.hpp"
 #endif
