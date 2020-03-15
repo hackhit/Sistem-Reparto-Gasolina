@@ -20,7 +20,7 @@ public:
     Infraestructura(string, float, float, string, string, string);
     ~Infraestructura();
 
-    void guardarDatos();
+    virtual void guardarDatos(string);
     void pedirDatos();
     string obtenerDatos();
 };
@@ -45,11 +45,11 @@ string Infraestructura::obtenerDatos()
     return "\nNombre: " + nombre + "\nCapacidad del tanque: " + capacidadTanque + "\nLitros manejados: " + Manejados + "\nLitros restantes: " + litrosDisponibles + "\nDatos del encargado" + datosEncargado;
 }
 
-void Infraestructura::guardarDatos()
+void Infraestructura::guardarDatos(string baseDatos)
 {
     ofstream archivo;
     //TODO cambie de crear el archivo a solo añadir informacion
-    archivo.open("Estaciones.txt", ios::app); //Abrimos el archivoCisternas
+    archivo.open(baseDatos, ios::app); //Abrimos el archivoCisternas
     //
     if (archivo.fail())
     {
@@ -79,7 +79,7 @@ void Infraestructura::pedirDatos()
     string _cedulaEncargado;
     string _telefonoEncargado;
     
-    cout << "Ingrese el nombre de la Estacion: " << endl;
+    cout << "Ingrese el Nombre: " << endl;
     getline(cin, _nombre);
     cout << "Ingrese su capacidad de gasolina: " << endl;
     cin >> capacidadTanque;
