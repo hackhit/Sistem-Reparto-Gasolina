@@ -22,6 +22,10 @@ public:
 
     virtual void guardarDatos(string);
     void pedirDatos();
+    void pedirDatosEncargados()
+    {
+        encargado.pedirDatos();
+    }
     string obtenerDatos();
 };
 
@@ -85,16 +89,10 @@ void Infraestructura::pedirDatos()
     cin >> capacidadTanque;
     cout << "Ingrese cantidad actual d gasolina: " << endl;
     cin >> _litros;
-    cout << "Ingrese el nombre del encargado: " << endl;
-    getline(cin, _nombreEncargado);
-    cout << "Ingrese su cedula: " << endl;
-    getline(cin, _cedulaEncargado);
-    cout << "Ingrese el telefono: " << endl;
-    getline(cin, _telefonoEncargado);
+    encargado.pedirDatos();
 
     nombre = _nombre;
     establecerCapacidad(capacidadTanque);
     establecerLitros(_litros);
-    encargado.establecerDatos(_nombreEncargado, _cedulaEncargado, _telefonoEncargado);
 }
 #endif 

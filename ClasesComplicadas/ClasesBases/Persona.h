@@ -17,6 +17,7 @@ public:
     void establecerDatos(string, string, string);
     string obtenerDatos();
     void guardarDatos();
+    virtual void pedirDatos();
 };
 
 Persona::Persona()
@@ -50,4 +51,19 @@ void Persona::guardarDatos()
 {
 }
 
+void Persona::pedirDatos()
+{
+    string _nombreEncargado;
+    string _cedulaEncargado;
+    string _telefonoEncargado;
+    cout << "Ingreso de datos del encargado" << endl;
+    cout << "Ingrese el nombre del encargado: " << endl;
+    getline(cin, _nombreEncargado);
+    cout << "Ingrese su cedula: " << endl;
+    getline(cin, _cedulaEncargado);
+    cout << "Ingrese el telefono: " << endl;
+    getline(cin, _telefonoEncargado);
+
+    establecerDatos(_nombreEncargado, _cedulaEncargado, _telefonoEncargado);
+}
 #endif

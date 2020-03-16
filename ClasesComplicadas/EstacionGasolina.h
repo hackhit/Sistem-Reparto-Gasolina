@@ -85,6 +85,7 @@ void EstacionGasolina::menu()
         cout << "3. Salir Gasolinera" << endl;
         cout << "Ingrese opcion: ";
         cin >> opcion;
+        cin.ignore();
         system("clear");
 
         switch (opcion)
@@ -97,6 +98,9 @@ void EstacionGasolina::menu()
             system("clear");
 
             break;
+        case 2:
+            pedirDatosEncargados();
+            system("clear");
         case 3:
 
             salir = true;
