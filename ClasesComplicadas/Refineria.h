@@ -20,6 +20,7 @@ public:
     {
         Infraestructura::guardarDatos(baseDatos);
     }
+
     void producirGasolina(float);
     void menu();
 };
@@ -33,9 +34,22 @@ Refineria::Refineria(string _nombre, float _litros, float capacidadTanque = 1500
 Refineria::~Refineria()
 {
 }
-
+/*
+    Aumenta la cantidad de gasolina que se dispone en la refineria
+    si se le ingresa 0 como valor se ingresa el valor manulmente
+    aumentarLitros(_litros);
+    aumentarLitrosTotales(_litros);
+*/
 void Refineria::producirGasolina(float _litros)
 {
+    
+    if( _litros == 0)
+    {
+        cout << "Ingrese la cantidad que se ingreso/producio: ";
+        cin >> _litros;
+        cin.ignore();
+    }
+
     aumentarLitros(_litros);
     aumentarLitrosTotales(_litros);
 }
@@ -43,44 +57,45 @@ void Refineria::producirGasolina(float _litros)
 void Refineria::menu()
 {
     bool salir = false;
-
+    char opcion;
     do
     {
-        int opcion;
-        obtenerDatos();
+        
+        cout << obtenerDatos() << endl;
 
         cout << endl << endl;
         cout << "Indique la accion a realizar" << endl;
         cout << "1. Producir Gasolina" << endl;
-        cout << "2. Cargar cisterna" << endl;
+        cout << "2. Cambiar Encargado" << endl;
         cout << "3. Salir Refineria" << endl;
         cout << "Ingrese opcion: ";
         cin >> opcion;
-
+        cin.ignore();
         system("clear");
 
         switch (opcion)
         {
-        case 1:
-            
+        case '1':
+            producirGasolina(0);
             system("clear");
 
             break;
-        case 3:
+        case '2':
+            cout << "Cambiar encargado" << endl;
+            pedirDatosEncargados();
 
+            break;
+        case '3':
             salir = true;
             
             break;
 
         default:
-
             cout << "Opcion no disponible ingrese otra" << endl;
-
             break;
         }
 
     } while (!salir);
-    
 }
 
 #endif

@@ -57,11 +57,11 @@ void Persona::pedirDatos()
     string _cedulaEncargado;
     string _telefonoEncargado;
     cout << "Ingreso de datos del encargado" << endl;
-    cout << "Ingrese el nombre del encargado: " << endl;
+    cout << "Ingrese el nombre del encargado: ";
     getline(cin, _nombreEncargado);
-    cout << "Ingrese su cedula: " << endl;
+    cout << "Ingrese su cedula: ";
     getline(cin, _cedulaEncargado);
-    cout << "Ingrese el telefono: " << endl;
+    cout << "Ingrese el telefono: ";
     getline(cin, _telefonoEncargado);
 
     establecerDatos(_nombreEncargado, _cedulaEncargado, _telefonoEncargado);

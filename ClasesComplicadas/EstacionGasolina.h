@@ -75,8 +75,8 @@ void EstacionGasolina::menu()
 
     do
     {
-        int opcion;
-        obtenerDatos();
+        char opcion;
+        cout << obtenerDatos() << endl;
 
         cout << endl << endl;
         cout << "Indique la accion a realizar" << endl;
@@ -90,7 +90,7 @@ void EstacionGasolina::menu()
 
         switch (opcion)
         {
-        case 1:
+        case '1':
             
             cout << "Ingresar la placa del carro: ";
             cin >> _placa;
@@ -98,13 +98,13 @@ void EstacionGasolina::menu()
             system("clear");
 
             break;
-        case 2:
+        case '2':
+            cout << "Cambiar encargado" << endl;
             pedirDatosEncargados();
             system("clear");
-        case 3:
+        case '3':
 
             salir = true;
-            
             break;
 
         default:
@@ -114,9 +114,7 @@ void EstacionGasolina::menu()
             break;
         }
 
-
     } while (!salir);
-    
 }
 
 #endif 
