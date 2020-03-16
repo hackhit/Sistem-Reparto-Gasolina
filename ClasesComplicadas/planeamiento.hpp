@@ -20,7 +20,7 @@ void Central::planeamiento()
         cout << "0. Salir planificacion" << endl;
         cout << "Ingrese la opcion: ";
         cin >> opcion;
-
+        system("clear");
         switch (opcion)
         {
         case '0':
@@ -34,6 +34,18 @@ void Central::planeamiento()
 
         case '2':
             realizarPlaneamiento(0);
+            break;
+
+        case '3':
+            cout << "Ingrese cuantos dias hata proxima entrega";
+            cin >> diasHastaProximaEntrega;
+
+            if (diasHastaProximaEntrega == 0)
+            {
+                diasFuncionandoSinEntrega = 0;
+            }
+            system("clear");
+            break;
         default:
             cout << "Ingrese Una opcion valida"<< endl;
             break;
@@ -51,10 +63,13 @@ void Central::realizarPlaneamiento(float valor = 0)
     queue<Refineria> auxiliaresRefinerias;
     queue<Cisterna> auxiliaresCisternas;
 
+    diasFuncionandoSinEntrega++;
+    diasHastaProximaEntrega--;
     if (valor == 0)
     {
         cout << "Ingrese cantidad a distribuir: ";
         cin >> cantidadAdistribuir;
+        system("clear");
     }
     else if (valor > 0)
     {
