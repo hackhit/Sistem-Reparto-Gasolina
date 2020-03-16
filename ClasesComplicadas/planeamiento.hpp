@@ -37,13 +37,7 @@ void Central::planeamiento()
             break;
 
         case '3':
-            cout << "Ingrese cuantos dias hata proxima entrega: ";
-            cin >> diasHastaProximaEntrega;
-
-            if (diasHastaProximaEntrega == 0)
-            {
-                diasFuncionandoSinEntrega = 0;
-            }
+            cambiarDiaProximaEntrega();
             system("clear");
             break;
         default:

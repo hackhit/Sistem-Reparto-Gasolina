@@ -93,7 +93,7 @@ void EstacionGasolina::menu()
         case '1':
             
             cout << "Ingresar la placa del carro: ";
-            cin >> _placa;
+            getline(cin , _placa);
             surtirGasolina(_placa, 40);
             system("clear");
 
@@ -102,13 +102,13 @@ void EstacionGasolina::menu()
             cout << "Cambiar encargado" << endl;
             pedirDatosEncargados();
             system("clear");
+            break;
         case '3':
 
             salir = true;
             break;
 
         default:
-
             cout << "Opcion no disponible ingrese otra" << endl;
 
             break;

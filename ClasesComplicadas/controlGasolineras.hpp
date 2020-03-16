@@ -2,27 +2,40 @@
 
 void Central::controlGasolineras()
 {
-    int opcion;
+    string opcion;
     while (true)
     {
         cout << "Lista de gasolineras, escoja cual desea supervisar" << endl << endl;
         mostrarEstaciones();
-        cout << endl << "Ingrese (0) para salir" << endl;
-        cout << "Ingrese numero estacion: ";
+        cout << endl << "0. para salir";
+        cout << endl << "A. para agregar una nueva " << endl;
+        cout << endl << "O Ingrese numero estacion";
         cin >> opcion;
-        if (opcion == 0)
+        cin.ignore();
+
+        if (opcion == "0")
         {
             system("clear");
             break;
         }
-        else if(opcion > estaciones.size())
+        else if (opcion == "a" || opcion == "A")
+        {
+            //Agregar nueva estacion
+            EstacionGasolina nueva("",0,0,"", "", "");
+            nueva.pedirDatos();
+            nueva.guardarDatos();
+            estaciones.push(nueva);
+            continue;
+        }
+        else if(atoi(opcion.c_str()) > estaciones.size())
         {
             system("clear");
             cout << "Estacion no existe ingrese de nuevo" << endl;
             continue;
         }
         system("clear");
-        seleccionarEstacion(opcion);
+        seleccionarEstacion(atoi(opcion.c_str()));
+        
         estaciones.front().menu();
         system("clear");
     }

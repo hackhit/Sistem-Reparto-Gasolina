@@ -2,32 +2,43 @@
 
 void Central::controlRefinerias()
 {
-    int opcion = 1;
+    string opcion;
     while (true)
     {
         cout << "Lista de refinerias, escoja cual desea supervisar" << endl << endl;
         mostrarRefinerias();
-        cout << endl << "Ingrese (0) para salir" << endl;
-        cout << "Ingrese numero refineria: ";
+        cout << endl << "0. para salir";
+        cout << endl << "A. para agregar una nueva refineria" << endl;
+        cout << endl << "O Ingrese numero refineria";
         cin >> opcion;
+        cin.ignore();
 
-        if (opcion == 0)
+        if (opcion == "0")
         {
             system("clear");
             break;
         }
-        else if(opcion > refinerias.size())
+        else if (opcion == "a" || opcion == "A")
+        {
+            //Agregar nueva estacion
+            Refineria nueva("",0,0,"", "", "");
+            nueva.pedirDatos();
+            nueva.guardarDatos();
+            refinerias.push(nueva);
+            continue;
+        }
+        else if(atoi(opcion.c_str()) > refinerias.size())
         {
             system("clear");
-            cout << "Refineria no existe ingrese de nuevo" << endl;
+            cout << "Estacion no existe ingrese de nuevo" << endl;
             continue;
         }
         system("clear");
-        seleccionarRefineria(opcion);
+        seleccionarEstacion(atoi(opcion.c_str()));
+        
         refinerias.front().menu();
         system("clear");
-    }
-    
+    }  
 }
 
 void Central::mostrarRefinerias()

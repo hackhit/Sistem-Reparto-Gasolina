@@ -83,12 +83,13 @@ void Infraestructura::pedirDatos()
     string _cedulaEncargado;
     string _telefonoEncargado;
     
-    cout << "Ingrese el Nombre: " << endl;
+    cout << "Ingrese el Nombre: ";
     getline(cin, _nombre);
-    cout << "Ingrese su capacidad de gasolina: " << endl;
+    cout << "Ingrese su capacidad de gasolina: ";
     cin >> capacidadTanque;
-    cout << "Ingrese cantidad actual d gasolina: " << endl;
+    cout << "Ingrese cantidad actual d gasolina: ";
     cin >> _litros;
+    cin.ignore();
     encargado.pedirDatos();
 
     nombre = _nombre;
