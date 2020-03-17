@@ -6,7 +6,7 @@
 class Tanque : public Gasolina 
 {
 private:
-    float capacidad;
+    float capacidad = 0;
     float litrosTotales = 0;
 public:
     Tanque(float, float);
@@ -20,6 +20,33 @@ public:
     float obtenerCapacidad();
     float establecerLitrosTotales(float);
     void establecerCapacidad(float);
+
+    float litrosParaLlenar()
+    {
+        return capacidad - cantidadLitrosDisponible();
+    }
+    bool capacidadLlena()
+    {
+        if(cantidadLitrosDisponible() >= capacidad)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    bool capacidadVacia()
+    {
+        if(cantidadLitrosDisponible() <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 };
 
 Tanque::Tanque(float litros = 0, float _capacidad = 50000) : Gasolina(litros)

@@ -1,7 +1,7 @@
 Placa: 23xsd8
 Capacidad del tanque:  150000.000000
-Litros manejados: 45000.000000
-Litros restantes: 15000.000000
+Litros manejados: 0
+Litros restantes: 1000000
 Datos del chofer
 Nombre: Jose Joster
 Cedula: 24037667
@@ -9,8 +9,8 @@ Telefono: 04140951540
 
 Placa: hja21s1f
 Capacidad del tanque: 20000.000000
-Litros manejados: 499.000000
-Litros restantes: 499.000000
+Litros manejados: 0
+Litros restantes: 0
 Datos del chofer
 Nombre: Luis Tenerife
 Cedula: 2649987
@@ -18,8 +18,8 @@ Telefono: 0412337654
 
 Placa: fta15s2h
 Capacidad del tanque: 20000.000000
-Litros manejados: 499.000000
-Litros restantes: 499.000000
+Litros manejados: 0
+Litros restantes: 0
 Datos del chofer
 Nombre: Pedro Mago
 Cedula: 21567889
@@ -27,8 +27,8 @@ Telefono: 04249654299
 
 Placa: fbu43s9o
 Capacidad del tanque: 20000.000000
-Litros manejados: 499.000000
-Litros restantes: 499.000000
+Litros manejados: 0
+Litros restantes: 0
 Datos del chofer
 Nombre: Celena Bastardo
 Cedula: 19768223

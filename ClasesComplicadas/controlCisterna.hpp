@@ -38,9 +38,8 @@ void Central::controlCisternas()
         }
         system("clear");
         seleccionarCisterna(atoi(opcion.c_str()));
-        //! Esto solo esta para prueba sustituir despues
-        cout << cisternas.front().obtenerDatos();
-        //system("clear");
+        cisternas.front().menu();
+        system("clear");
     }
     
 }

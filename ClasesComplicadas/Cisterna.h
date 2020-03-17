@@ -24,6 +24,7 @@ public:
     {
         return Infraestructura::obtenerDatos();
     }
+    void menu();
 };
 
 Cisterna::Cisterna(string _nombre, float _litros, float capacidadTanque = 150000, string _nombreEncargado = "", string _cedulaEncargado = "", string _telefonoEncargado = "") : Infraestructura(_nombre,  _litros, capacidadTanque = 150000, _nombreEncargado ,  _cedulaEncargado , _telefonoEncargado )
@@ -35,4 +36,44 @@ Cisterna::~Cisterna()
 {
 }
 
+void Cisterna::menu()
+{
+bool salir = false;
+    char opcion;
+    do
+    { 
+        cout << obtenerDatos();
+        cout << endl << endl;
+        cout << "Indique la accion a realizar" << endl;
+        cout << "1. Pernsare en algo" << endl;
+        cout << "2. Cambiar Encargado" << endl;
+        cout << "3. Salir Refineria" << endl;
+        cout << "Ingrese opcion: ";
+        cin >> opcion;
+        cin.ignore();
+        system("clear");
+
+        switch (opcion)
+        {
+        case '1':
+            system("clear");
+
+            break;
+        case '2':
+            cout << "Cambiar encargado" << endl;
+            pedirDatosEncargados();
+
+            break;
+        case '3':
+            salir = true;
+            
+            break;
+
+        default:
+            cout << "Opcion no disponible ingrese otra" << endl;
+            break;
+        }
+
+    } while (!salir);
+}
 #endif

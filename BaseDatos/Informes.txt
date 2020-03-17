@@ -1,0 +1,13 @@
+F:Cisterna  23xsd8
+ entrego 13095.238281
+O: Estacion  Bomba las morochasF:Cisterna  23xsd8
+ entrego 13095.238281
+O: Estacion  Atlántico IF:Cisterna  23xsd8
+ entrego 13095.238281
+O: Estacion  CauraF:Cisterna  23xsd8
+ entrego 13095.238281
+O: Estacion  CachamayF:Cisterna  23xsd8
+ entrego 13095.238281
+O: Estacion  Las AmericasF:Cisterna  23xsd8
+ entrego 13095.238281
+O: Estacion  Reparto aqui

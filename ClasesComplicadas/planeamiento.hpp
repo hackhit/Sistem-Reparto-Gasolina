@@ -51,14 +51,15 @@ void Central::planeamiento()
 void Central::realizarPlaneamiento(float valor = 0)
 {
     float cantidadAdistribuir = valor;
-    float exceso = 0;
-    float extraidoRefineria = 0;
+    float totalAExtraer = estaciones.size() * valor;
+
     queue<EstacionGasolina> auxiliarEstaciones;
     queue<Refineria> auxiliaresRefinerias;
     queue<Cisterna> auxiliaresCisternas;
 
     diasFuncionandoSinEntrega++;
     diasHastaProximaEntrega--;
+
     if (valor == 0)
     {
         cout << "Ingrese cantidad a distribuir: ";
@@ -70,27 +71,69 @@ void Central::realizarPlaneamiento(float valor = 0)
         
     }
     
-    //TODO: Aca deberia ser las cisternas
-    // Distribuir gasolina
+    float extraidoRefineria = 0;
+    float totalCargado = 0;
+    float exceso = 0;
+    /*
     while (!refinerias.empty())
     {
-        extraidoRefineria = refinerias.front().descargar(cantidadAdistribuir);
-        //Pasamos a la siguiente refineria
-       if (refinerias.front().cantidadLitrosDisponible() == 0)
+        if(totalCargado <= totalAExtraer)
+        {
+        float faltaParaLLenar = cisternas.front().litrosParaLlenar();
+        
+        extraidoRefineria += refinerias.front().descargar(faltaParaLLenar);
+        totalCargado += extraidoRefineria;
+        //Pasamos a la siguiente refineria?
+        if (refinerias.front().cantidadLitrosDisponible() == 0)
+        {
+            //Pasar a siguiente cisterna
+            auxiliaresRefinerias.push(refinerias.front());
+            refinerias.pop(); 
+        }   
+
+        exceso += cisternas.front().cargar(extraidoRefineria);
+        extraidoRefineria = exceso;
+
+        //!generarInforme
+        //Pasar a siguiente Estacion
+        if (cisternas.front().capacidadLlena())
+        {
+            auxiliaresCisternas.push(cisternas.front());
+            cisternas.pop(); 
+        }
+    
+        if (cisternas.empty())
+        {
+            break;
+        }
+
+        }
+    }
+
+    while (!auxiliaresCisternas.empty())
+    {
+        cisternas.push(auxiliaresCisternas.front());
+        auxiliaresCisternas.pop();
+    }
+    */
+    // Distribuir gasolina
+    float extraidoCisterna;
+    while (!cisternas.empty())
+    {
+        extraidoCisterna = cisternas.front().descargar(cantidadAdistribuir);
+        //Pasamos a la siguiente cisterna
+       if (cisternas.front().cantidadLitrosDisponible() == 0)
        {
-           //!generarInforme
-           //Pasar a siguiente refineria
-           auxiliaresRefinerias.push(refinerias.front());
-           refinerias.pop(); 
+           //Pasar a siguiente cisterna
+           auxiliaresCisternas.push(cisternas.front());
+           cisternas.pop(); 
        }   
-       //cout << " extraidoRefineria " <<exceso;
-       //cout << estaciones.front().obtenerDatos();
-       //!Deberia llenar cisterna primero
-       if(extraidoRefineria >= cantidadAdistribuir)
+
+       if(extraidoCisterna >= cantidadAdistribuir)
        {
             exceso += estaciones.front().cargar(cantidadAdistribuir);
-            extraidoRefineria -= cantidadAdistribuir;
-            //!generarInforme
+            extraidoCisterna -= cantidadAdistribuir + exceso;
+            cisternas.front().generarInforme(cantidadAdistribuir, estaciones.front().datosImportantes());
             //Pasar a siguiente Estacion
             auxiliarEstaciones.push(estaciones.front());
             //cout << estaciones.front().obtenerDatos();
@@ -103,10 +146,16 @@ void Central::realizarPlaneamiento(float valor = 0)
        //Pregunta si falta llenar alguna estacion y queda algun exceso
     }
 
+    
     while (!auxiliaresRefinerias.empty())
     {
         refinerias.push(auxiliaresRefinerias.front());
         auxiliaresRefinerias.pop();
+    }
+    while (!auxiliaresCisternas.empty())
+    {
+        cisternas.push(auxiliaresCisternas.front());
+        auxiliaresCisternas.pop();
     }
     while (!auxiliarEstaciones.empty())
     {

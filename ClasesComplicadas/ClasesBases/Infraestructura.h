@@ -36,7 +36,7 @@ public:
     
     string datosImportantes()
     {
-        return tipoInfraestructura;
+        return  tipoInfraestructura + ": " + nombre;
     }
 
     void pedirDatosEncargados()
@@ -84,9 +84,24 @@ void Infraestructura::guardarDatos(string baseDatos)
 
     archivo.close();
 }
+/*
+    Se genera un informe con la cantidad de litros que se le aporto a un objetivo
+*/
 void Infraestructura::generarInforme(float cantidadEntregada, string datosImportantesObejtivo)
 {
+    ofstream archivo;
+    //TODO cambie de crear el archivo a solo añadir informacion
+    archivo.open("BaseDatos/Informes.txt", ios::app); //Abrimos el archivoCisternas
+    //
+    if (archivo.fail())
+    {
+        cout << "No se pudo abrir el archivo" << endl;
+        exit(1);
+    }
+    
+    archivo << "F:" + tipoInfraestructura + ": " + nombre + "\n entrego " +  to_string(cantidadEntregada) +  "\nO: " + datosImportantesObejtivo;
 
+    archivo.close();
 }
 /*
     Establece las siguientes variables de la Infraestructura actual

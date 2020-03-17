@@ -56,8 +56,7 @@ void Refineria::producirGasolina(float _litros)
         cin.ignore();
     }
 
-    aumentarLitros(_litros);
-    aumentarLitrosTotales(_litros);
+    aumentarLitrosTotales(cargar(_litros));
 }
 
 void Refineria::menu()
