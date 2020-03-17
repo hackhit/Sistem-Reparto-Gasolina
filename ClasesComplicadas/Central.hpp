@@ -13,7 +13,6 @@ void Central::menu()
         cout << "3. Controlar Refineria" << endl;   
         cout << "4. Controlar cisternas" << endl;
         cout << "5. Revisar si hay algun trafico ilegal" << endl;
-        cout << "6. Agregar estaciones/refinerias/cinternas" << endl;
         cout << "0. Salir" << endl;
         cout << "Ingrese opcion: ";
         cin >> opcion;
@@ -35,18 +34,18 @@ void Central::funciones(char opcion)
         break;
     case '2':
         controlGasolineras();
-        break;
-
-    case '3': 
         
-        controlRefinerias();
         break;
-
+    case '3': 
+        controlRefinerias();
+        
+        break;
     case '4': 
         //! Cisternas no funcionan la reparo luego
-        //controlCisternas();
+        controlCisternas();
         cout << "Las cinternas no funcionan" << endl;
         system("clear");
+        
         break;
     case '0':
         cout << "Estas seguro que desea salir (Y / N)" << endl;
@@ -56,12 +55,16 @@ void Central::funciones(char opcion)
         {
             exit(1);
         }
+        
         break;
     case 'R': //! R de robar
         //TODO: aca ira funcion caos ya que eso es lo que agregan los militares
         cout << "Bienvenido senior militar ya que conozco como funciona simplmente robara y no guardara datos de que robo" << endl;
+        
+        break;
     default:
         cout << "Opcion invalidad ingrese de nuevo" << endl << endl;
+
         break;
     }
 }

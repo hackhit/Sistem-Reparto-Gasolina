@@ -5,11 +5,10 @@ void Central::controlGasolineras()
     string opcion;
     while (true)
     {
-        cout << "Lista de gasolineras, escoja cual desea supervisar" << endl << endl;
         mostrarEstaciones();
         cout << endl << "0. para salir";
-        cout << endl << "A. para agregar una nueva " << endl;
-        cout << endl << "O Ingrese numero estacion";
+        cout << endl << "A. para agregar una nueva refineria";
+        cout << endl << "Lista de refinerias, escoja cual desea supervisar: " ;
         cin >> opcion;
         cin.ignore();
 

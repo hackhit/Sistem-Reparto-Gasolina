@@ -3,64 +3,31 @@
 
 #include <iostream>
 using namespace std;
-#include <fstream>
-#include "ClasesBases/Tanque.h"
+#include "ClasesBases/Gasolina.h"
 #include "ClasesBases/Persona.h"
+#include "ClasesBases/Infraestructura.h"
 
-class Cisterna : public Tanque
+class Cisterna : public Infraestructura
 {
 private:
-    string placa;
-    Persona chofer;
+    string baseDatos = "BaseDatos/Cisternas.txt";
 
 public:
-    Cisterna(string, float, float, string, string, string);
+    Cisterna(string, float, float ,string, string, string);
     ~Cisterna();
-
-    void guardarDatos();
-    string obtenerPlaca()
+    
+    void guardarDatos()
     {
-        return placa;
+        Infraestructura::guardarDatos(baseDatos);
     }
-    string obtenerDatos();
 };
 
-Cisterna::Cisterna(string _placa, float _litros,float capacidadCisterna = 50000,  string _nombreChofer = "", string _cedulaChofer = "", string _telefonoChofer = "") : Tanque(_litros, capacidadCisterna)
-{    
-    chofer.establecerDatos(_nombreChofer, _cedulaChofer, _telefonoChofer);
-    placa = _placa;
+Cisterna::Cisterna(string _nombre, float _litros, float capacidadTanque = 150000, string _nombreEncargado = "", string _cedulaEncargado = "", string _telefonoEncargado = "") : Infraestructura(_nombre,  _litros, capacidadTanque = 150000, _nombreEncargado ,  _cedulaEncargado , _telefonoEncargado )
+{
 }
 
 Cisterna::~Cisterna()
 {
 }
-
-string Cisterna::obtenerDatos()
-{
-    string datosChofer = chofer.obtenerDatos();
-    string Manejados = to_string(litrosManejados()) ;
-    string litrosDisponibles = to_string(cantidadLitrosDisponible());
-    string capacidadTanque = to_string(obtenerCapacidad());
-
-    return "\nPlaca: " + placa + "\nCapacidad del tanque: " + capacidadTanque +  "\nLitros manejados: " + Manejados + "\nLitros restantes: " + litrosDisponibles + "\nDatos del chofer" + datosChofer;
-}
-
-void Cisterna::guardarDatos()
-{
-    ofstream archivo;
-    //TODO cambie de crear el archivo a solo añadir informacion
-    archivo.open("BaseDatos/Cisternas.txt", ios::app); //Abrimos el archivo
-    //
-    if (archivo.fail())
-    {
-        cout << "No se pudo abrir el archivo Cisternas" << endl;
-        exit(1);
-    }
-    
-    archivo << obtenerDatos();
-
-    archivo.close();
-}
-
 
 #endif

@@ -5,27 +5,39 @@
 
 void Central::controlCisternas()
 {
-    int opcion;
-    while (true)
+    string opcion;
+    bool salir = false;
+    while (!salir)
     {
-        cout << "Lista de cisternas, escoja cual desea supervisar" << endl << endl;
-        //mostrarCisternas();
-        cout << endl << "Ingrese (0) para salir" << endl;
-        cout << "Ingrese numero estacion: ";
+        mostrarCisternas();
+        cout << endl << "0. para salir";
+        cout << endl << "A. para agregar una nueva refineria";
+        cout << endl << "Lista de cisternas, escoja cual desea supervisar: " ;
         cin >> opcion;
-        if (opcion == 0)
+        cin.ignore();
+
+        if (opcion == "0")
         {
             system("clear");
             break;
         }
-        else if(opcion > cisternas.size())
+        else if (opcion == "a" || opcion == "A")
+        {
+            //Agregar nueva estacion
+            Cisterna nueva("",0,0,"", "", "");
+            //nueva.pedirDatos();
+            //nueva.guardarDatos();
+            //cisternas.push(nueva);
+            continue;
+        }
+        else if( atoi(opcion.c_str()) > cisternas.size())
         {
             system("clear");
             cout << "Cisterna no existe ingrese de nuevo" << endl;
             continue;
         }
         system("clear");
-        seleccionarCisterna(opcion);
+        seleccionarCisterna(atoi(opcion.c_str()));
         //! Esto solo esta para prueba sustituir despues
         cout << cisternas.front().obtenerDatos();
         system("clear");

@@ -4,7 +4,7 @@ void Central::inicializarCisternas()
 {
     string variable;
     
-    string _placa, _litros, _litrosTotales, _nombre, _cedula, _telefono, _capacidad;
+    string _nombreRefineria, _litros, _litrosTotales, _nombre, _cedula, _telefono, _capacidad;
     
     ifstream archivo;
     archivo.open("BaseDatos/Cisternas.txt", ios::in);
@@ -23,7 +23,7 @@ void Central::inicializarCisternas()
 
         if(variable == "Placa:")
         {
-            archivo >> _placa;
+            std::getline(archivo, _nombreRefineria);
         }
         else if(variable == "tanque:")
         {
@@ -53,11 +53,10 @@ void Central::inicializarCisternas()
             float litrosTotales = ::atof(_litrosTotales.c_str());
             float capcidadTanque = ::atof(_capacidad.c_str());
 
-            Cisterna nueva(_placa, litros, capcidadTanque , _nombre, _cedula, _telefono);
+            Cisterna nueva(_nombreRefineria, litros, capcidadTanque , _nombre, _cedula, _telefono);
+
             nueva.establecerLitrosTotales(litrosTotales);
-            
             cisternas.push(nueva);
-            nueva.~Cisterna();
         }
     }
     //cout << _placa << _litros << _litrosTotales << _nombre << _cedula << _telefono;
