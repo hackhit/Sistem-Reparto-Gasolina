@@ -11,14 +11,19 @@ class Cisterna : public Infraestructura
 {
 private:
     string baseDatos = "BaseDatos/Cisternas.txt";
-
+    string llave = "Placa";
 public:
     Cisterna(string, float, float ,string, string, string);
     ~Cisterna();
     
     void guardarDatos()
     {
-        Infraestructura::guardarDatos(baseDatos);
+        Infraestructura::guardarDatos(baseDatos, llave);
+    }
+
+    string obtenerDatos()
+    {
+        return Infraestructura::obtenerDatos(llave);
     }
 };
 

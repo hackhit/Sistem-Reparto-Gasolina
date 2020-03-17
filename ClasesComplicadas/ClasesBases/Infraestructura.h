@@ -20,13 +20,13 @@ public:
     Infraestructura(string, float, float, string, string, string);
     ~Infraestructura();
 
-    virtual void guardarDatos(string);
+    virtual void guardarDatos(string, string);
     void pedirDatos();
     void pedirDatosEncargados()
     {
         encargado.pedirDatos();
     }
-    string obtenerDatos();
+    virtual string obtenerDatos(string);
 };
 
 Infraestructura::Infraestructura(string _nombre, float _litros, float capacidadTanque = 150000, string _nombreEncargado = "", string _cedulaEncargado = "", string _telefonoEncargado = "") : Tanque(_litros, capacidadTanque)
@@ -39,17 +39,17 @@ Infraestructura::~Infraestructura()
 {
 }
 
-string Infraestructura::obtenerDatos()
+string Infraestructura::obtenerDatos(string llave)
 {
     string datosEncargado = encargado.obtenerDatos();
     string Manejados = to_string(litrosManejados()) ;
     string litrosDisponibles = to_string(cantidadLitrosDisponible());
     string capacidadTanque = to_string(obtenerCapacidad());
 
-    return "\nNombre: " + nombre + "\nCapacidad del tanque: " + capacidadTanque + "\nLitros manejados: " + Manejados + "\nLitros restantes: " + litrosDisponibles + "\nDatos del encargado" + datosEncargado;
+    return "\n" + llave + ": " + nombre + "\nCapacidad del tanque: " + capacidadTanque + "\nLitros manejados: " + Manejados + "\nLitros restantes: " + litrosDisponibles + "\nDatos del encargado" + datosEncargado;
 }
 
-void Infraestructura::guardarDatos(string baseDatos)
+void Infraestructura::guardarDatos(string baseDatos, string llave)
 {
     ofstream archivo;
     //TODO cambie de crear el archivo a solo añadir informacion
@@ -61,7 +61,7 @@ void Infraestructura::guardarDatos(string baseDatos)
         exit(1);
     }
     
-    archivo << obtenerDatos();
+    archivo << obtenerDatos(llave);
 
     archivo.close();
 }

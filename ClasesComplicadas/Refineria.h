@@ -11,14 +11,19 @@ class Refineria : public Infraestructura
 {
 private:
     string baseDatos = "BaseDatos/Refinerias.txt";
-
+    string llave = "Refineria";
 public:
     Refineria(string, float, float ,string, string, string);
     ~Refineria();
 
     void guardarDatos()
     {
-        Infraestructura::guardarDatos(baseDatos);
+        Infraestructura::guardarDatos(baseDatos, llave);
+    }
+
+    string obtenerDatos()
+    {
+        return Infraestructura::obtenerDatos(llave);
     }
 
     void producirGasolina(float);
@@ -59,10 +64,8 @@ void Refineria::menu()
     bool salir = false;
     char opcion;
     do
-    {
-        
-        cout << obtenerDatos() << endl;
-
+    { 
+        obtenerDatos();
         cout << endl << endl;
         cout << "Indique la accion a realizar" << endl;
         cout << "1. Producir Gasolina" << endl;

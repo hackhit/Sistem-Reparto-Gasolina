@@ -1,4 +1,4 @@
-Nombre de refineria: Gasolina la cruz
+Refineria: Gasolina la cruz
 Capacidad del tanque: 900000.000000
 Litros manejados: 0
 Litros restantes: 200000.000000
@@ -7,7 +7,7 @@ Nombre: Adam
 Cedula: 27533444
 Telefono: 04263324455
 
-Nombre de refineria: Nohai Gasolina
+Refineria: Nohai Gasolina
 Capacidad del tanque: 450000.000000
 Litros manejados: 0
 Litros restantes: 150000
@@ -15,8 +15,7 @@ Datos del encargado
 Nombre: Noe
 Cedula: 27533444
 Telefono: 04261234567
-
-Nombre de refineria: El Negro guayanence
+Refineria: El Negro guayanence
 Capacidad del tanque: 100000.000000
 Litros manejados: 0
 Litros restantes: 200000.000000
@@ -24,7 +23,7 @@ Datos del encargado
 Nombre: Adam
 Cedula: 26577894
 Telefono: 04240000001
-Nombre: Palo bajo
+Refineria: Palo bajo
 Capacidad del tanque: 10000000.000000
 Litros manejados: 0.000000
 Litros restantes: 0.000000

@@ -1,4 +1,4 @@
-Nombre de estacion: Bomba las morochas
+Estacion: Bomba las morochas
 Capacidad del tanque: 90000.000000
 Litros manejados: 0
 Litros restantes: 0
@@ -7,7 +7,7 @@ Nombre: Pedro Lovera
 Cedula: 12756877
 Telefono: 04268795112
 
-Nombre de estacion: Atlántico I
+Estacion: Atlántico I
 Capacidad del tanque: 25000.000000
 Litros manejados: 0
 Litros restantes: 0
@@ -16,7 +16,7 @@ Nombre: Jose Campos
 Cedula: 12753477
 Telefono: 04265624234
 
-Nombre de estacion: Caura
+Estacion: Caura
 Capacidad del tanque: 40000.000000
 Litros manejados: 0
 Litros restantes: 0
@@ -24,8 +24,7 @@ Datos del encargado
 Nombre: Pedro Lovera
 Cedula: 12756877
 Telefono: 04248755113
-
-Nombre de estacion: Cachamay
+Estacion: Cachamay
 Capacidad del tanque: 10000.000000
 Litros manejados: 0
 Litros restantes: 0
@@ -34,7 +33,7 @@ Nombre: Adam Matute
 Cedula: 20756841
 Telefono: 04266648132
 
-Nombre de estacion: Las Americas
+Estacion: Las Americas
 Capacidad del tanque: 40000.000000
 Litros manejados: 0
 Litros restantes: 0

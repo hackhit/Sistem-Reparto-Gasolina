@@ -84,7 +84,7 @@ void Central::inicializarRefinerias()
         
         //cout << variable << endl;
 
-        if(variable == "refineria:")
+        if(variable == "Refineria:")
         {
             std::getline(archivo, _nombreRefineria);
         }
@@ -146,7 +146,7 @@ void Central::inicializarEstaciones()
         archivo >> variable;
         
         //cout << variable << endl;
-        if(variable == "estacion:")
+        if(variable == "Estacion:")
         {
             std::getline(archivo, _nombreEstacion);
         }
