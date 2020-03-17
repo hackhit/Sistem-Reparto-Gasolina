@@ -40,7 +40,7 @@ void Central::controlCisternas()
         seleccionarCisterna(atoi(opcion.c_str()));
         //! Esto solo esta para prueba sustituir despues
         cout << cisternas.front().obtenerDatos();
-        system("clear");
+        //system("clear");
     }
     
 }
@@ -48,16 +48,14 @@ void Central::controlCisternas()
 void Central::seleccionarCisterna(int opcion)
 {
     queue<Cisterna> auxiliar;
-
     for (int i = 1; i < opcion + 1; i++)
     {
        if (opcion == i)
        {
            break;
        }
-
-       auxiliar.push(cisternas.front());
-       cisternas.pop();
+        auxiliar.push(cisternas.front());
+        cisternas.pop();
     }
     
     while (!auxiliar.empty())
@@ -65,7 +63,7 @@ void Central::seleccionarCisterna(int opcion)
         cisternas.push(auxiliar.front());
         auxiliar.pop();
     }
-    
+
 }
 
 void Central::mostrarCisternas()
@@ -74,10 +72,10 @@ void Central::mostrarCisternas()
     int posicion = 1;
     while (!cisternas.empty())
     {
-        cout << "Cisterna " << posicion << ".";
+        cout << "Cisterna " << posicion << "." ;
         cout << cisternas.front().obtenerDatos();
         auxiliar.push(cisternas.front());
-        cout << endl;
+        cout << endl << endl;
         cisternas.pop();
         posicion++;
     }

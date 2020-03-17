@@ -31,3 +31,11 @@ Datos del encargado
 Nombre: Aquiles Robo
 Cedula: 0000666
 Telefono: 0426753951
+Refineria: Pepere
+Capacidad del tanque: 14000.000000
+Litros manejados: 0.000000
+Litros restantes: 0.000000
+Datos del encargado
+Nombre: Albert Tucara
+Cedula: 465468
+Telefono: 04145554447

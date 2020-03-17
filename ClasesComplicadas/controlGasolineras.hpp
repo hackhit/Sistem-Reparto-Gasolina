@@ -73,7 +73,7 @@ void Central::mostrarEstaciones()
         cout << "Estacion " << posicion << ".";
         cout << estaciones.front().obtenerDatos();
         auxiliar.push(estaciones.front());
-        cout << endl;
+        cout << endl << endl;
         estaciones.pop();
         posicion++;
     }

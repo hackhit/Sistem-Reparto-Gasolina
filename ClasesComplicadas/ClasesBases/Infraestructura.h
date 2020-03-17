@@ -14,19 +14,38 @@ private:
     string tipoInfraestructura;
     string nombre;
     Persona encargado;
-    queue<string> vehiculos;
 
 public:
     Infraestructura(string, float, float, string, string, string);
     ~Infraestructura();
 
-    virtual void guardarDatos(string, string);
+    void colocarLlave(string llave)
+    {
+        tipoInfraestructura = llave;
+    }
+    string obtenerLlave()
+    {
+        return tipoInfraestructura;
+    }
+
+    string optenerNombre()
+    {
+        return nombre;
+    }
     void pedirDatos();
+    
+    string datosImportantes()
+    {
+        return tipoInfraestructura;
+    }
+
     void pedirDatosEncargados()
     {
         encargado.pedirDatos();
     }
-    virtual string obtenerDatos(string);
+    virtual string obtenerDatos();
+    virtual void guardarDatos( string);
+    virtual void generarInforme(float, string);
 };
 
 Infraestructura::Infraestructura(string _nombre, float _litros, float capacidadTanque = 150000, string _nombreEncargado = "", string _cedulaEncargado = "", string _telefonoEncargado = "") : Tanque(_litros, capacidadTanque)
@@ -39,17 +58,17 @@ Infraestructura::~Infraestructura()
 {
 }
 
-string Infraestructura::obtenerDatos(string llave)
+string Infraestructura::obtenerDatos()
 {
     string datosEncargado = encargado.obtenerDatos();
     string Manejados = to_string(litrosManejados()) ;
     string litrosDisponibles = to_string(cantidadLitrosDisponible());
     string capacidadTanque = to_string(obtenerCapacidad());
 
-    return "\n" + llave + ": " + nombre + "\nCapacidad del tanque: " + capacidadTanque + "\nLitros manejados: " + Manejados + "\nLitros restantes: " + litrosDisponibles + "\nDatos del encargado" + datosEncargado;
+    return "\n" + tipoInfraestructura + ": " + nombre + "\nCapacidad del tanque: " + capacidadTanque + "\nLitros manejados: " + Manejados + "\nLitros restantes: " + litrosDisponibles + "\nDatos del encargado" + datosEncargado;
 }
 
-void Infraestructura::guardarDatos(string baseDatos, string llave)
+void Infraestructura::guardarDatos(string baseDatos)
 {
     ofstream archivo;
     //TODO cambie de crear el archivo a solo añadir informacion
@@ -61,9 +80,13 @@ void Infraestructura::guardarDatos(string baseDatos, string llave)
         exit(1);
     }
     
-    archivo << obtenerDatos(llave);
+    archivo << obtenerDatos();
 
     archivo.close();
+}
+void Infraestructura::generarInforme(float cantidadEntregada, string datosImportantesObejtivo)
+{
+
 }
 /*
     Establece las siguientes variables de la Infraestructura actual

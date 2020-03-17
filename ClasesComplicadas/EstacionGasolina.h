@@ -9,7 +9,6 @@ class EstacionGasolina : public Infraestructura
 {
 private:
     string baseDatos = "BaseDatos/Estaciones.txt";
-    string llave = "Estacion";
     queue<string> vehiculos;
 
 public:
@@ -18,12 +17,12 @@ public:
 
     void guardarDatos()
     {
-        Infraestructura::guardarDatos(baseDatos, llave);
+        Infraestructura::guardarDatos(baseDatos);
     }
 
     string obtenerDatos()
     {
-        return Infraestructura::obtenerDatos(llave);
+        return Infraestructura::obtenerDatos();
     }
 
     void surtirGasolina(string, float);
@@ -32,6 +31,7 @@ public:
 
 EstacionGasolina::EstacionGasolina(string _nombre, float _litros, float capacidadTanque = 150000, string _nombreEncargado = "", string _cedulaEncargado = "", string _telefonoEncargado = "") : Infraestructura(_nombre,  _litros, capacidadTanque = 150000, _nombreEncargado ,  _cedulaEncargado , _telefonoEncargado )
 {
+    colocarLlave("Estacion");
 }
 
 EstacionGasolina::~EstacionGasolina()
@@ -83,7 +83,7 @@ void EstacionGasolina::menu()
     do
     {
         char opcion;
-        obtenerDatos();
+        cout << obtenerDatos();
 
         cout << endl << endl;
         cout << "Indique la accion a realizar" << endl;

@@ -11,19 +11,19 @@ class Refineria : public Infraestructura
 {
 private:
     string baseDatos = "BaseDatos/Refinerias.txt";
-    string llave = "Refineria";
+
 public:
     Refineria(string, float, float ,string, string, string);
     ~Refineria();
 
     void guardarDatos()
     {
-        Infraestructura::guardarDatos(baseDatos, llave);
+        Infraestructura::guardarDatos(baseDatos);
     }
 
     string obtenerDatos()
     {
-        return Infraestructura::obtenerDatos(llave);
+        return Infraestructura::obtenerDatos();
     }
 
     void producirGasolina(float);
@@ -34,6 +34,7 @@ Suponemos que cuando creamos la refineria tiene capacidad infinita pues porque q
 */
 Refineria::Refineria(string _nombre, float _litros, float capacidadTanque = 150000, string _nombreEncargado = "", string _cedulaEncargado = "", string _telefonoEncargado = "") : Infraestructura(_nombre,  _litros, capacidadTanque = 150000, _nombreEncargado ,  _cedulaEncargado , _telefonoEncargado )
 {
+    colocarLlave("Refineria");
 }
 
 Refineria::~Refineria()
@@ -65,7 +66,7 @@ void Refineria::menu()
     char opcion;
     do
     { 
-        obtenerDatos();
+        cout << obtenerDatos();
         cout << endl << endl;
         cout << "Indique la accion a realizar" << endl;
         cout << "1. Producir Gasolina" << endl;

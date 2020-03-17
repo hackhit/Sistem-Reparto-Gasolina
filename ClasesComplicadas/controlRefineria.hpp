@@ -67,7 +67,8 @@ void Central::seleccionarRefineria(int opcion)
         {
             break;
         }
-
+        cout << i << endl << refinerias.front().obtenerDatos();
+        cin.get();
         auxiliar.push(refinerias.front());
         refinerias.pop();
     }
