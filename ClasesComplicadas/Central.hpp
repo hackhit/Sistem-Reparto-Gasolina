@@ -6,9 +6,6 @@ void Central::menu()
     while (!salir)
     {
         char opcion;
-        cout << refinerias.front().optenerNombre() << endl;
-        cout << cisternas.front().optenerNombre() << endl;
-        cout << estaciones.front().optenerNombre() << endl;
         cout << "Sitema para distribucion y manejo de la gasolina para ciudad Guayana" << endl;
         cout << "1. Planear distribucion del dia" << endl;   
         cout << "2. Controlar gasolineras" << endl;   

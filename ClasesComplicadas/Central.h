@@ -73,6 +73,8 @@ void Central::cambiarDiaProximaEntrega()
         diasFuncionandoSinEntrega = 0;
     }
 }
+
+
 #include "Central.hpp"
 #include "ManejoArchivosCentral.hpp"
 #include "controlGasolineras.hpp"

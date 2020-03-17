@@ -10,7 +10,6 @@ void Central::controlRefinerias()
         cout << endl << "A. para agregar una nueva refineria";
         cout << endl << "Lista de refinerias, escoja cual desea supervisar: " ;
         cin >> opcion;
-        cin.ignore();
 
         if (opcion == "0")
         {
@@ -33,7 +32,7 @@ void Central::controlRefinerias()
             continue;
         }
         system("clear");
-        seleccionarEstacion(atoi(opcion.c_str()));
+        seleccionarRefineria(atoi(opcion.c_str()));
         
         refinerias.front().menu();
         system("clear");
@@ -63,14 +62,12 @@ void Central::seleccionarRefineria(int opcion)
 
     for (int i = 1; i < opcion + 1; i++)
     {
-        if (opcion == i)
-        {
-            break;
-        }
-        cout << i << endl << refinerias.front().obtenerDatos();
-        cin.get();
-        auxiliar.push(refinerias.front());
-        refinerias.pop();
+       if (opcion == i)
+       {
+           break;
+       }
+       auxiliar.push(refinerias.front());
+       refinerias.pop();
     }
     
     while (!auxiliar.empty())
