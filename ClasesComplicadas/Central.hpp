@@ -45,6 +45,9 @@ void Central::funciones(char opcion)
         system("clear");
         
         break;
+    case '5':
+        revisarRobos();
+        break;
     case '0':
         cout << "Estas seguro que desea salir (Y / N)" << endl;
         cin >> confirmar;
@@ -65,4 +68,9 @@ void Central::funciones(char opcion)
 
         break;
     }
+}
+
+void Central::revisarRobos()
+{
+    
 }

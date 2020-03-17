@@ -134,4 +134,5 @@ void Infraestructura::pedirDatos()
     establecerCapacidad(capacidadTanque);
     establecerLitros(_litros);
 }
+
 #endif 

@@ -27,6 +27,7 @@ public:
     void menu();
     void funciones(char);
     void planeamiento();
+    void revisarRobos();
     //Prototipos de funcion a utilizar para el planteamiento
     float litrosEnRefineria();
     void cambiarDiaProximaEntrega(); 
