@@ -25,9 +25,9 @@ void Central::controlCisternas()
         {
             //Agregar nueva estacion
             Cisterna nueva("",0,0,"", "", "");
-            //nueva.pedirDatos();
-            //nueva.guardarDatos();
-            //cisternas.push(nueva);
+            nueva.pedirDatos();
+            nueva.guardarDatos();
+            cisternas.push(nueva);
             continue;
         }
         else if( atoi(opcion.c_str()) > cisternas.size())

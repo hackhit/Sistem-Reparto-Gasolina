@@ -41,3 +41,11 @@ Datos del encargado
 Nombre: Luciano Joster
 Cedula: 23599670
 Telefono: 04249854236
+Estacion: Reparto aqui
+Capacidad del tanque: 455555.000000
+Litros manejados: 0.000000
+Litros restantes: 14000.000000
+Datos del encargado
+Nombre: Amy
+Cedula: 1265
+Telefono: 0424999999
