@@ -48,15 +48,15 @@ Refineria::~Refineria()
 */
 void Refineria::producirGasolina(float _litros)
 {
-    
+    float cargado;
     if( _litros == 0)
     {
         cout << "Ingrese la cantidad que se ingreso/producio: ";
         cin >> _litros;
         cin.ignore();
     }
-
-    aumentarLitrosTotales(cargar(_litros));
+    cargado = cargar(_litros);
+    aumentarLitrosTotales(cargado);
 }
 
 void Refineria::menu()
@@ -68,7 +68,7 @@ void Refineria::menu()
         cout << obtenerDatos();
         cout << endl << endl;
         cout << "Indique la accion a realizar" << endl;
-        cout << "1. Producir Gasolina" << endl;
+        cout << "1. Producir/Recibir Gasolina" << endl;
         cout << "2. Cambiar Encargado" << endl;
         cout << "3. Salir Refineria" << endl;
         cout << "Ingrese opcion: ";

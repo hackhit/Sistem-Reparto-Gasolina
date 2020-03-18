@@ -79,7 +79,7 @@ void EstacionGasolina::menu()
 {
     bool salir = false;
     string _placa;
-
+    float gasolinaSurtida;
     do
     {
         char opcion;
@@ -101,7 +101,10 @@ void EstacionGasolina::menu()
             
             cout << "Ingresar la placa del carro: ";
             getline(cin , _placa);
-            surtirGasolina(_placa, 40);
+            cout << "Ingrese la cantidad de gasolina a surtir: ";
+            cin >> gasolinaSurtida;
+            cin.ignore();
+            surtirGasolina(_placa, gasolinaSurtida);
             system("clear");
 
             break;
