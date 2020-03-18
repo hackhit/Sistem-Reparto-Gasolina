@@ -1,13 +1,272 @@
-F:Cisterna  23xsd8
+
+F:Refineria:  Gasolina la cruz
  entrego 13095.238281
-O: Estacion  Bomba las morochasF:Cisterna  23xsd8
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
  entrego 13095.238281
-O: Estacion  Atlántico IF:Cisterna  23xsd8
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
  entrego 13095.238281
-O: Estacion  CauraF:Cisterna  23xsd8
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
  entrego 13095.238281
-O: Estacion  CachamayF:Cisterna  23xsd8
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
  entrego 13095.238281
-O: Estacion  Las AmericasF:Cisterna  23xsd8
+O: Cisterna:  4456624F:Refineria:  Gasolina la cruz
  entrego 13095.238281
-O: Estacion  Reparto aqui
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  hja21s1f
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  fta15s2h
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  fbu43s9o
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  4456624
+ entrego 13095.238281
+O: Estacion:  CachamayF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  hja21s1f
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  fta15s2h
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  fbu43s9o
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  4456624
+ entrego 13095.238281
+O: Estacion:  CachamayF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Reparto aquiF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Reparto aquiF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  hja21s1f
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Reparto aquiF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Reparto aquiF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Reparto aquiF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Reparto aquiF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Reparto aquiF:Refineria:  El Negro guayanence
+ entrego 155555.000000
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 13095.238281
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 13095.238281
+O: Estacion:  Reparto aquiF:Refineria:  El Negro guayanence
+ entrego 155555.000000
+O: Cisterna:  23xsd8

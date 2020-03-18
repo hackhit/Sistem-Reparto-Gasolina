@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "Central.h"
  
 void Central::menu()
@@ -72,5 +73,42 @@ void Central::funciones(char opcion)
 
 void Central::revisarRobos()
 {
+    queue <string> fuente;
+    queue <float> cantidad;
+    queue <string> objetivos;
     
+    string variable;
+    string _nombre, _litros, _nombreObjetivo;
+    
+    ifstream archivo;
+    archivo.open("BaseDatos/Refinerias.txt", ios::in);
+
+    if(archivo.fail())
+    {
+        cout << "No se pudo abrir el archivo o no existe base de datos" << endl;
+        exit(1);
+    }
+    while (!archivo.eof())
+    {
+        archivo >> variable;
+        if(variable == "F:")
+        {
+            getline(archivo, variable);
+            fuente.push(variable);
+        }
+        if(variable == "entrego")
+        {
+            archivo >> variable;
+            cantidad.push(atof(variable.c_str()));
+        }
+        if(variable == "O:")
+        {
+            getline(archivo, variable);
+            objetivos.push(variable);
+        }
+    }
+    
+    archivo.close();
+
+    cout << "Se perdieron"; 
 }

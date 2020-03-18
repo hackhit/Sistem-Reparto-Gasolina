@@ -6,8 +6,8 @@
 class Tanque : public Gasolina 
 {
 private:
-    float capacidad = 0;
-    float litrosTotales = 0;
+    float capacidad ;
+    float litrosTotales ;
 public:
     Tanque(float, float);
     ~Tanque();
@@ -103,7 +103,7 @@ float Tanque::descargar(float cantidadADescargar)
 {
     float cantidadExtraida;
     //Revisa si puede extraer la cantidad pedida
-    bool puedeExtraerLaCantidad = cantidadLitrosDisponible() - cantidadADescargar > 0;
+    bool puedeExtraerLaCantidad = (cantidadLitrosDisponible() - cantidadADescargar) > 0;
     if (puedeExtraerLaCantidad)
     {
         reducirLitros(cantidadADescargar);

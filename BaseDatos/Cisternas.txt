@@ -1,7 +1,7 @@
 Placa: 23xsd8
 Capacidad del tanque:  150000.000000
-Litros manejados: 0
-Litros restantes: 0
+Litros manejados: 100000
+Litros restantes: 100000
 Datos del chofer
 Nombre: Jose Joster
 Cedula: 24037667
