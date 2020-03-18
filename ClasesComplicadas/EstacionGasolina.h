@@ -46,8 +46,8 @@ void EstacionGasolina::surtirGasolina(string placa, float _litros)
     {
         if(vehiculos.front() == placa)
         {
-            cout << "Arrestelo policia la placa " << placa <<" es una bachaquero!!!!" << endl;
-            cout << "MULTAR!!! (Y / Y): ";
+            cout << "La placa siguiente " << placa <<" ya disfruto de la distribucion de hoy, por lo que se dispondra de realizar una multa por bachaqueo" << endl;
+            cout << ": ";
             cin >> detenteAmigo; 
             return;
         }

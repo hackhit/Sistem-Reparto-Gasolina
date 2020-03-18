@@ -49,3 +49,11 @@ Datos del encargado
 Nombre: Amy
 Cedula: 1265
 Telefono: 0424999999
+Estacion: Donde la cola esta mas corta
+Capacidad del tanque: 100000.000000
+Litros manejados: 0.000000
+Litros restantes: 0.000000
+Datos del encargado
+Nombre: Aca Reparto
+Cedula: 20414787
+Telefono: 04125598745
