@@ -45,9 +45,8 @@ bool salir = false;
         cout << obtenerDatos();
         cout << endl << endl;
         cout << "Indique la accion a realizar" << endl;
-        cout << "1. Pernsare en algo" << endl;
-        cout << "2. Cambiar Encargado" << endl;
-        cout << "3. Salir Refineria" << endl;
+        cout << "1. Cambiar Encargado" << endl;
+        cout << "2. Salir Refineria" << endl;
         cout << "Ingrese opcion: ";
         cin >> opcion;
         cin.ignore();
@@ -56,15 +55,11 @@ bool salir = false;
         switch (opcion)
         {
         case '1':
-            system("clear");
-
-            break;
-        case '2':
             cout << "Cambiar encargado" << endl;
             pedirDatosEncargados();
 
             break;
-        case '3':
+        case '2':
             salir = true;
             
             break;

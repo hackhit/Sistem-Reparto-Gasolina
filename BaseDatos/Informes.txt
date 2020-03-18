@@ -385,4 +385,92 @@ O: Estacion:  Las AmericasF:Cisterna:  23xsd8
  entrego 15204.082031
 O: Estacion:  Reparto aquiF:Cisterna:  23xsd8
  entrego 15204.082031
-O: Estacion:  Donde la cola esta mas corta
+O: Estacion:  Donde la cola esta mas cortaF:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Reparto aquiF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Donde la cola esta mas cortaF:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 15928.085938
+O: Estacion:  Bomba las morochasF:Cisterna:  hja21s1f
+ entrego 15928.085938
+O: Estacion:  Atlántico IF:Cisterna:  fta15s2h
+ entrego 15928.085938
+O: Estacion:  CauraF:Cisterna:  fbu43s9o
+ entrego 15928.085938
+O: Estacion:  CachamayF:Cisterna:  4456624
+ entrego 15928.085938
+O: Estacion:  Las AmericasF:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 15204.082031
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Bomba las morochasF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Atlántico IF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  CauraF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  CachamayF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Las AmericasF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Reparto aquiF:Cisterna:  23xsd8
+ entrego 15204.082031
+O: Estacion:  Donde la cola esta mas cortaF:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  23xsd8F:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  hja21s1fF:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  fta15s2hF:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  fbu43s9oF:Refineria:  Gasolina la cruz
+ entrego 15928.085938
+O: Cisterna:  4456624F:Cisterna:  23xsd8
+ entrego 15928.085938
+O: Estacion:  Bomba las morochasF:Cisterna:  hja21s1f
+ entrego 15928.085938
+O: Estacion:  Atlántico IF:Cisterna:  fta15s2h
+ entrego 15928.085938
+O: Estacion:  CauraF:Cisterna:  fbu43s9o
+ entrego 15928.085938
+O: Estacion:  CachamayF:Cisterna:  4456624
+ entrego 15928.085938
+O: Estacion:  Las Americas
